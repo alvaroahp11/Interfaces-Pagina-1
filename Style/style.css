@@ -1,5 +1,11 @@
 * {
     box-sizing: border-box;
+    background-color: #5B7B9A;
+    
+}
+
+body {
+    padding: 0;
 }
 
 .row::after {
@@ -11,14 +17,19 @@
 [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
+}
+
+.header {
+    margin: 0;
+    padding: 45px;
+    background-color: #FFB447;
 }
 
 /* Telefonos */
 [class*="col-"] {
     width: 100%;
-
 }
+
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
