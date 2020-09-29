@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
-    background-color: #5B7B9A;
-    
 }
 
 body {
-    padding: 0;
+    margin: 0;
+    background-color: #5B7B9A;
+ 
 }
 
 .row::after {
@@ -19,11 +19,8 @@ body {
     padding: 15px;
 }
 
-.header {
-    margin: 0;
-    padding: 45px;
-    background-color: #FFB447;
-}
+
+
 
 /* Telefonos */
 [class*="col-"] {
@@ -65,8 +62,33 @@ body {
     .col-12 {width: 100%;}
   }
 
-/* .menu{
+.header {
+    margin: 0;
+    padding: 15px;
+    background-color: #FFB447;
+}
 
+.logo {
+    size: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.menu li:hover{
+    background-color: #0099cc;
 }
 
 .main  {
@@ -75,4 +97,9 @@ body {
 
 .news{
     
-} */
+} 
+
+.footer{
+    background-color: black;
+    color: whitesmoke;
+}
