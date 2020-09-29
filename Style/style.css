@@ -68,8 +68,8 @@ body {
     background-color: #FFB447;
 }
 
-.logo {
-    size: 15px;
+.logo img{
+padding: ;
 }
 
 .menu ul {
@@ -103,3 +103,10 @@ body {
     background-color: black;
     color: whitesmoke;
 }
+
+.menu a{
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+

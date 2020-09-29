@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Ingenieria de Software </title>
+        <title> Calculo </title>
         <meta charset="utf-8">
         <LINK rel="stylesheet" href="./Style/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,13 @@
     <body>
         <!-- Header de la página-->
         <div class="header col-12 col-s-12">
-            <img class="logo col-3 col-s-3" src="./Images/Logo.png" alt="Logo">
+            <picture class="logo col-3 col-s-3">
+                <source srcset="./Images/Logo.png" media="(max-width: 100%)">
+                <img src="./Images/Logo.png" alt="Flowers">
+            </picture>
+          
             <nav class="menu-header col-3 col-s-3">
-                <ul class="header col-12 col-s-12">
+                <ul>
                     <li class="col-3 col-s-3">Opcion 1</li>
                     <li class="col-3 col-s-3">Opcion 2</li>
                     <li class="col-3 col-s-3">Opcion 3</li>
@@ -25,45 +29,47 @@
         <!-- Menu de la parte izquierda-->
         <div class="menu col-3 col-s-2">
             <ul>
-                <li>The Flight</li>
-                <li>The City</li>
-                <li>The Island</li>
-                <li>The Food</li>
+                <li><a class="menuleft" href=#>Listado de Estudiantes</a></li>
+                <li><a class="menuleft" href=#>Foro de la Asignatura</a></li>
+                <li><a class="menuleft" href=#>Calificaciones</a></li>
               </ul>
         </div>
 
         <!-- Main de la parte del medio-->
         <div class="main col-6 col-s-10">
             <div class="temas">
-                <h2>Tema 1</h2>
-                <img class="temaImg" src="./Images/menusVideo.jpg" alt="Imagen tema 1">
-                <p class="decripTema"> Esto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del temaEsto es mi primera descipcion del tema</p>
+                <h2>Números enteros </h2>
+                <img class="temaImg" src="./Images/numeros.png" alt="Numeros enteros">
+                <p class="decripTema"> El conjunto de los números enteros se nombra con la letra Z, esá formado por
+                    infinitos elementos y se describe como Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . .} . Vemos
+                    que Z contiene a N (esto es N ⊂ Z); además contiene al elemento 0 y a los valores
+                    correspondientes a los números naturales con signo negativo</p>
 
                 <div class="videos">
-                    <h3>Titulo Video 1</h3>
+                    <h3>Qué son los números enteros?</h3>
                     <div class="video-content">
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1"   
-                            allowfullscreen="allowfullscreen"
-                            mozallowfullscreen="mozallowfullscreen" 
-                            msallowfullscreen="msallowfullscreen" 
-                            oallowfullscreen="oallowfullscreen" 
-                            webkitallowfullscreen="webkitallowfullscreen"> 
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/bqjzkZkVAiQ"   
+                        allowfullscreen="allowfullscreen"
+                        mozallowfullscreen="mozallowfullscreen" 
+                        msallowfullscreen="msallowfullscreen" 
+                        oallowfullscreen="oallowfullscreen" 
+                        webkitallowfullscreen="webkitallowfullscreen"> 
                         </iframe>
-                        <p class="descVideos"> Esta esla primera descripcion del primer video</p>
+                        <p class="descVideos"> Un video explicativo sobre que son los números enteros</p>
                     </div>
                 </div>
 
                 <div class="videos">
-                    <h3>Titulo Video 2</h3>
+                    <h3>Ejercicios de números enteros</h3>
                     <div class="video-content">
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=1"   
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/UbqjPCAjUfg"   
                             allowfullscreen="allowfullscreen"
                             mozallowfullscreen="mozallowfullscreen" 
                             msallowfullscreen="msallowfullscreen" 
                             oallowfullscreen="oallowfullscreen" 
                             webkitallowfullscreen="webkitallowfullscreen"> 
                         </iframe>
-                        <p class="descVideos"> Esta es la srgunda descripcion del segundo video</p>
+                        <p class="descVideos"> En este segundo video, veremos las principales operaciones que se pueden realizar con los números enteros</p>
                     </div>
                 </div>
 
