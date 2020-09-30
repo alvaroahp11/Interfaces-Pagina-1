@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background-color: #5B7B9A;
+    background-color: #6fccba;
  
 }
 
@@ -65,13 +65,13 @@ body {
 .header {
     margin: 0;
     padding: 15px;
-    background-color: #FFB447;
+    background-color: #ffbb59;
 }
 
 .logo img{
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 60%;
 }
 
 .menu-header ul{
@@ -84,9 +84,12 @@ body {
 .menu-header li{
     padding: 8px;
     margin-bottom: 7px;
-    color: black;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
 
+.menu-header li:hover{
+    background-color: #0099cc;
 }
 
 .menu ul {
