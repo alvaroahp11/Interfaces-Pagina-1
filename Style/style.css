@@ -58,6 +58,13 @@ body {
 
 /* Menu izquierdo */
 
+
+#menu-icon{
+    display: block;
+    cursor: pointer;
+    
+}
+
 .menu {
     display: none;
 }
@@ -135,6 +142,10 @@ body {
 /* Tablets */
 @media only screen and (min-width: 600px) {
 
+    #menu-icon {
+        display: nonegit ;
+    }
+
     .menu-header {
         display: none;
     }
@@ -153,8 +164,8 @@ body {
     
     .menu{
         text-align: center;
+        display: inherit;
     }
-
     .decripTema{
         text-align: justify;
     }
@@ -172,10 +183,7 @@ body {
         
     }
 
-    .video-content iframe{
-        height: 350px;
-        width: 300%;
-    }
+
 
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
