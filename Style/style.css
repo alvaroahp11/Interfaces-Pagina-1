@@ -5,6 +5,8 @@
 body {
     margin: 0;
     background-color: #6fccba;
+    /* background-color: black; */
+   
  
 }
 
@@ -95,6 +97,10 @@ body {
 #menu li:hover{
     background-color: #0099cc;
 }
+
+#menu.show {
+    display: inherit;
+}
 /* Contenido central Main */
 .main  {
    
@@ -132,6 +138,49 @@ body {
     background-color: black;
     color: whitesmoke;
 }
+
+.UC3M{
+    text-align: center;
+
+}
+
+.UC3M img{
+    height: 50px;
+}
+.UC3M a{
+    display: block;
+}
+
+.copyright{
+    text-align: center;
+    
+
+}
+
+.copy{
+    font-size: 50px;
+    margin: 0px;
+    padding: 0;
+}
+.dueños{
+    margin-bottom: 0;
+}
+
+.politica{
+    text-align: center;
+}
+
+.politica a{
+    text-decoration: none;
+    display: block;
+    
+}
+
+.politica p{
+    color: white;
+}
+
+
 
 
 
@@ -194,6 +243,10 @@ body {
         width: 100%;
         height: 20rem;
     }
+    .copyright{
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
 
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -245,7 +298,11 @@ body {
     .menu-header li:hover{
         background-color: #0099cc;
     }
- 
+    
+    .videos iframe{
+        width: 100%;
+        height: 30rem;
+    }
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
