@@ -105,6 +105,9 @@ body {
     
 } 
 
+.tablet-news{
+    display: none;
+}
 
 /* Footer */
 .footer{
@@ -114,6 +117,22 @@ body {
 
 /* Tablets */
 @media only screen and (min-width: 600px) {
+
+    .menu-header {
+        display: none;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .news{
+        display: none;
+    }
+
+    .tablet-news{
+        display: inherit;
+    }
     
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
@@ -127,20 +146,12 @@ body {
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
-    
-    .menu-header {
-        display: none;
-    }
-
-    .logo{
-        padding: 0;
-    }
-
 
   }
 
 /* Computadora */
 @media only screen and (min-width: 768px) {
+    
     .menu-header {
         /* width: ; */
         padding: 4.4% 3%;
@@ -151,6 +162,14 @@ body {
         padding: 0;
         margin: 0;
         
+    }
+
+    .tablet-news{
+        display: none;
+    }
+
+    .news{
+        display: inherit;
     }
     
     .menu-header li{text-align: center;
@@ -177,6 +196,7 @@ body {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+
   }
 
 
