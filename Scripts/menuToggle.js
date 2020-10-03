@@ -11,6 +11,7 @@ jQuery('document').ready(function($){
     });
 
     var notiEventBtn = $('.tablet-news');
+    var notiEventText = $('.tablet-news a')
     var mainDisplay = $('.main');
     var notiEventDisplay = $('.news');
 
@@ -18,11 +19,19 @@ jQuery('document').ready(function($){
         if (mainDisplay.hasClass('show')){
             mainDisplay.removeClass('show');
             notiEventDisplay.addClass('show');
+            notiEventText.text('Temario');
         }else{
             mainDisplay.addClass('show');
             notiEventDisplay.removeClass('show');
+            notiEventText.text('Noticias/Eventos');
+
         }
     });
+
+    if (mainDisplay.is('[class*=col-s]')){
+        mainDisplay.addClass('show');
+        notiEventDisplay.removeClass('show');
+    }
 
 
 
