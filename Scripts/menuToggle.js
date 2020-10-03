@@ -28,9 +28,10 @@ jQuery('document').ready(function($){
         }
     });
 
-    if (mainDisplay.is('[class*=col-s]')){
-        mainDisplay.addClass('show');
-        notiEventDisplay.removeClass('show');
+    var i = 0;
+    if (screen.width() > 600 && i == 0){
+            i++;
+            location.reload(true);
     }
 
 
