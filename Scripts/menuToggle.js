@@ -1,3 +1,4 @@
+
 jQuery('document').ready(function($){
     var menuBtn = $('.menu-icon');
     var menu = $('#menu');
@@ -28,12 +29,14 @@ jQuery('document').ready(function($){
         }
     });
 
-    var i = 0;
-    if (screen.width() > 600 && i == 0){
-            i++;
-            location.reload(true);
-    }
 
+    // if ($(document).width() == 600){
+    //     i = i + 1;
+    //     location.reload();
+    // }
+    
+        
+   
 
 
 
