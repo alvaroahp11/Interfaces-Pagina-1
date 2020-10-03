@@ -127,7 +127,7 @@ body {
 /* Noticias parte derecha */
 .news{
     display: none;
-} 
+}
 
 .tablet-news{
     display: inherit;
@@ -179,13 +179,6 @@ body {
 .politica p{
     color: white;
 }
-
-
-
-
-
-
-
 
 
 /* ---------------------------------------------------- */
