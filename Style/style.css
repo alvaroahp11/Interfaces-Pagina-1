@@ -142,7 +142,7 @@ body {
     display: inherit;
 }
 
-.news.show 
+ 
 
 .news ul {
     list-style-type: none;
@@ -249,6 +249,10 @@ body {
     #menu{
         padding-top: 40px;
         
+    }
+
+    .main {
+        display: inherit;
     }
 
     .decripTema{
