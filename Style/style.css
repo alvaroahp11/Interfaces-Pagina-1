@@ -103,6 +103,14 @@ body {
     display: inherit;
 }
 /* Contenido central Main */
+.main {
+    display: none;
+}
+
+.main.show{
+    display: inherit;
+}
+
 .temas{
     padding-bottom: 30px;
 }
@@ -129,6 +137,12 @@ body {
 .news{
     display: none;
 }
+
+.news.show{
+    display: inherit;
+}
+
+.news.show 
 
 .news ul {
     list-style-type: none;

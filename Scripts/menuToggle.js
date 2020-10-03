@@ -9,4 +9,22 @@ jQuery('document').ready(function($){
             menu.addClass('show'); 
         } 
     });
+
+    var notiEventBtn = $('.tablet-news');
+    var mainDisplay = $('.main');
+    var notiEventDisplay = $('.news');
+
+    notiEventBtn.click(function($){
+        if (mainDisplay.hasClass('show')){
+            mainDisplay.removeClass('show');
+            notiEventDisplay.addClass('show');
+        }else{
+            mainDisplay.addClass('show');
+            notiEventDisplay.removeClass('show');
+        }
+    });
+
+
+
+
 });
