@@ -117,32 +117,14 @@ body {
     display: inherit;
 }
 
-.temas{
-    padding-bottom: 30px;
+.imgEstudiante{
+   
+}
+.imgEstudiante img{
+    height: 50px;
+    
 }
 
-.temaImg{
-    width: 100%;
-
-}
-
-.videos {
-    width: 100%;
-}
-
-.videos iframe{
-    width: 100%;
-    height: 15rem;
-}
-
-.decripTema {
-    text-align: justify;
-}
-
-.videos h3{
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
 /* Noticias parte derecha */
 .news{
     display: none;
@@ -267,22 +249,6 @@ body {
         display: inherit;
     }
 
-    .decripTema{
-        text-align: justify;
-    }
-
-    .descVideos{
-       text-align: justify;
-    }
-
-    .videos {
-        width: 100%;
-    }
-    
-    .videos iframe{
-        width: 100%;
-        height: 20rem;
-    }
 
     /* news */
 
