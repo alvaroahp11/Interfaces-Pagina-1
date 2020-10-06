@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 15px;
     background-color: #ffbb59;
-
+    
 }
 
 
@@ -117,6 +117,19 @@ body {
     display: inherit;
 }
 
+.tabla{
+    border: 2px solid white;
+    padding: 0;
+}
+
+.tabla th{
+        text-align: center;
+        padding: 8px;
+        margin-bottom: 7px;
+        background-color: white;
+        color: black;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
 
 /* Noticias parte derecha */
 .news{
@@ -242,9 +255,7 @@ body {
         display: inherit;
     }
 
-    .tabla{
-        border: 2px solid white;
-    }
+
 
 
     /* news */

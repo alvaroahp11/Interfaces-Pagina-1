@@ -122,6 +122,10 @@ body {
     float: left;
 }
 
+.infEstudiante ul{
+    list-style: none;
+}
+
 
 /* Noticias parte derecha */
 .news{
