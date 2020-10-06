@@ -30,10 +30,7 @@ jQuery('document').ready(function($){
     });
 
 
-    // if ($(document).width() == 600){
-    //     i = i + 1;
-    //     location.reload();
-    // }
+   
     
         
    
