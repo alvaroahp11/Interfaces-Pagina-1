@@ -56,9 +56,6 @@ body {
 .menu-header a{
     text-decoration: none;
     color: black;
-    white-space: nowrap;
-    display: block;
-    padding: ;
 }
 
 .menu-header {
@@ -101,7 +98,6 @@ body {
     text-decoration: none;
     display: block;
     color: black;
-    
 }
 
 
@@ -120,6 +116,7 @@ body {
 .main.show{
     display: inherit;
 }
+
 .tema {
     display: flex;
     justify-content: space-between;
@@ -134,13 +131,15 @@ body {
 .titulo-tema {
     display: flex;
     float: left;
-
+    margin: 0;
+    padding: 10px 5px 10px 5px;
 }
 
 .cant-msg-icon {
     position: relative;
     display: inline-block;
     text-align: center;
+    padding: 5px;
 }
 
 .cant-msg-icon div{
@@ -151,6 +150,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.fecha-tema {
+    padding: 5px;
+}
+
 
 /* Noticias parte derecha */
 .news{
@@ -234,6 +238,21 @@ body {
 /* ---------------------------------------------------- */
 /* Tablets */
 @media only screen and (min-width: 600px) {
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+
     /* Header */
     .logo {
         padding: 0;
@@ -276,23 +295,6 @@ body {
         display: inherit;
     }
 
-    .decripTema{
-        text-align: justify;
-    }
-
-    .descVideos{
-       text-align: justify;
-    }
-
-    .videos {
-        width: 100%;
-    }
-    
-    .videos iframe{
-        width: 100%;
-        height: 20rem;
-    }
-
     /* news */
 
     .news{
@@ -310,85 +312,12 @@ body {
         border-left: 1px solid white;
     }
 
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
 
 
   }
 
 /* Computadora */
 @media only screen and (min-width: 768px) {
-    
-    /* Header */
-    .logo {
-        padding: 0;
-    }
-
-    .logo img{
-        width: 50px;
-    }
-    
-    .menu-header {
-        padding: 4.4% 3%;
-    }
-    
-    .menu-header ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: baseline;
-        
-    }
-
-    .menu-header {
-        display: inherit;
-    }
-
-    .menu-header li{
-
-        text-align: center;
-        padding: 12px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
-        background-color: white;
-        white-space: nowrap;
-    }
-    
-    .menu-header li:hover{
-        background-color: #0099cc;
-    }
-
-    /* Menu izquierdo */
-
-    .tablet-news{
-        display: none;
-    }
-
-    
-    .videos iframe{
-        width: 100%;
-        height: 30rem;
-    }
-    /* news */
-    .news{
-        display: inherit;
-    }
-
-    
-
-    /* footer */
-
-
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -401,6 +330,65 @@ body {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    
+    /* Header */
+    .header{
+        align-content: space-between;
+    }
+
+    .logo {
+        padding: 0;
+        
+    }
+
+    .logo img{
+        width: 10px;
+        
+    }
+    
+    .menu-header {
+        padding: 4.4% 3%;
+    }
+    
+    .menu-header ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .menu-header {
+        display: inherit;
+    }
+
+    .menu-header li{
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 7px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+        background-color: white;
+    }
+    
+    .menu-header li:hover{
+        background-color: #0099cc;
+    }
+
+    /* Menu izquierdo */
+
+    .tablet-news{
+        display: none;
+    }
+
+    /* Main */
+
+    /* news */
+    .news{
+        display: inherit;
+    }
+
+    
+
+    /* footer */
 
   }
 
