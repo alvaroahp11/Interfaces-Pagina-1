@@ -2,6 +2,8 @@
 *{
     padding: 0;
     margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
 }
 
 * a {
@@ -9,8 +11,12 @@
     color: black;
 }
 
+html {
+    width: 100%;
+}
+
 body {
-    margin: 0;
+    width: 100%;
     background-color: #6fccba;
 }
 
@@ -22,7 +28,6 @@ body {
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
 }
 
 
@@ -34,16 +39,20 @@ body {
 
 /* Header*/
 
+
 .header {
     margin: 0;
-    padding: 15px;
+    padding: 3%;
     background-color: #ffbb59;
 }
 
+#menu-icon {
+    display: block;
+}
+
 .logo {
-    padding: 0 15% 0 15%;
+    padding: 0 25% 0 25%;
     margin: 0;
-    width: 70%;
 }
 
 .header h1 {
@@ -54,29 +63,51 @@ body {
     padding: 0;
 }
 .menu-header{
-    padding: 5%;
-    width: 90%;
+    padding: 2.5%;
 }
 
 .menu-header ul{
     list-style-type: none;
     padding: 0;
     margin: 0;  
+    display: flex;
 }
 
 .menu-header li{
+    font-size: 12px;
     text-align: center;
-    padding: 5% 0% 5% 0%;
-    margin-bottom: 7px;
+    padding: 2% 0% 2% 0%;
+    margin: 0 2%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
     background-color: white;
 }
 
 
 /* Menu izquierdo */
+#menu {
+    padding: 2%;
+    /* display: none; */
+}
+#menu h2{
+    font-size: 30px;
+    padding: 0 0 2% 2%;
+}
 
+#menu li{
+    text-align: center;
+    padding: 2%;
+    background-color: white;
+    margin: 0 10% 2% 10%;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
 
 /* Contenido central Main */
+
+#registrarse {
+}
+
+/* Temario */
 .temas{
     padding-bottom: 30px;
 }
@@ -104,9 +135,72 @@ body {
     margin-bottom: 15px;
 }
 
+/* listado de estudiantes */
+#listadoestudiantes {
+    display: none;
+}
+
+/* Foro */
+
+#foro {
+    display: none;
+}
+
+/* calificaciones */
+
+#calificaciones {
+    display: none;
+}
+
+
 
 /* Footer */
+.footer{
+    background-color: black;
+    color: whitesmoke;
+}
 
+.UC3M{
+    text-align: center;
+
+}
+
+.UC3M img{
+    height: 50px;
+}
+
+.UC3M a{
+    display: block;
+}
+
+.copyright{
+    text-align: center;
+    
+
+}
+
+.copy{
+    font-size: 50px;
+    margin: 0px;
+    padding: 0;
+}
+.dueños{
+    margin-bottom: 0;
+}
+
+.politica{
+    text-align: center;
+}
+
+.politica a{
+    text-decoration: none;
+    display: block;
+    
+}
+
+.politica p{
+    color: white;
+}
 
 /* ---------------------------------------------------- */
 /* Tablets */

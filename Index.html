@@ -12,7 +12,7 @@
     <body>
         <!-- Header de la página-->
         <div class="header col-12 col-s-12">
-            <img class="menu-icon" src="./Images/menuIcon.png" alt="icono del apertura del menu">  
+            <img id="menu-icon" src="./Images/menuIcon.png" alt="icono del apertura del menu">  
             <img class="logo col-3 col-s-3" src="./Images/logo-con-fondo.jpg" alt="logo">
             
             
@@ -29,7 +29,7 @@
 
         <!-- Menu de la parte izquierda-->
         <div class="col-3 col-s-3" id="menu">
-            <h1> Menu</h1>
+            <h2> Menu</h2>
             <ul>
                 <li><a class="menuleft" href="./ListadoEstudiantes.html">Listado de Estudiantes</a></li>
                 <li><a class="menuleft" href="./ForoAsignatura.html">Foro de la Asignatura</a></li>
@@ -41,120 +41,459 @@
 
 
         <!-- Main de la parte del medio-->
-        <div class="main col-6 col-s-9">
-            <div class="temas">
-                <h2>Tema 1 - Números naturales</h2>
-                <img class="temaImg" src="./Images/numeros-naturales-1024x683.jpg" alt="Imagen tema 2">
-                <p class="decripTema"> El conjunto ordenado de los números naturales se nombra con la letra N, tiene
-                    infinitos elementos y se suele representar como N = {1, 2, 3, . . .}. Aquí las llaves
-                    indican que es un conjunto, del que se muestran los tres primeros elementos, y los
-                    puntos suspensivos representan los infinitos números naturales que, por razones obvias, no se pueden escribir en su totalidad.
-                </p>
+        <div class="principal col-6 col-s-9">
 
-                <div class="videos">
-                    <h3>¿Qué son los números naturales?</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/uqCO15pKGKo"   > 
-                        </iframe>
-                        <p class="descVideos"> En este video se puede observar una explicación de que son los números naturales y de donde han nacido</p>
-                    </div>
-                </div>
+            <div id="registrarse" class="main col-6 col-s-9">
+                <button>Registrarse</button>
+                <button>Iniciar Sesión</button>
+                <form autocomplete="on">
+                    <label for="usuario">Nombre de Usuario</label><br>
+                    <input id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required autocomplete="on"><br><br>
 
-                <div class="videos">
-                    <h3>¿Cómo sumar números enteros</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/WAucYao8whY"   > 
-                        </iframe>
-                        <p class="descVideos"> En este video se puede observar una explicación detallada de como se hace la suma de números naturales</p>
-                    </div>    
-                </div>
+                    <label for="nia">NIA</label><br>
+                    <input id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required autocomplete="on"><br><br>
 
-                <div class="videos">
-                    <h3>¿Es el cero un número natural?</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/Q2zan_9zzg8"   > 
-                        </iframe>
-                        <p class="descVideos">En este video se hace una explicación de el gran dilema entre si el cero esta o no en los números naturales</p>
-                    </div>    
-                </div>
-            </div>
-            <div class="temas">
-                <h2>Tema 2 - Números enteros </h2>
-                <img class="temaImg" src="./Images/numeros.png" alt="Numeros enteros">
-                <p class="decripTema"> El conjunto de los números enteros se nombra con la letra Z, esá formado por
-                    infinitos elementos y se describe como Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . .} . Vemos
-                    que Z contiene a N (esto es N ⊂ Z); además contiene al elemento 0 y a los valores
-                    correspondientes a los números naturales con signo negativo</p>
+                    <label for="contraseña">Contraseña</label><br>
+                    <input id="password" type="password" name="contraseña" pattern="[a-z0-9]+" maxlength="8" title="La contraseña debe de estar compuesta de letras minúsculas y números" placeholder="Contraseña" required><br><br>
 
-                <div class="videos">
-                    <h3>¿Qué son los números enteros?</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/bqjzkZkVAiQ"   > 
-                        </iframe>
-                        <p class="descVideos"> Un video explicativo sobre que son los números enteros</p>
-                    </div>
-                </div>
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required autocomplete="on"><br><br>
 
-                <div class="videos">
-                    <h3>Ejercicios de números enteros</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/UbqjPCAjUfg"   > 
-                        </iframe>
-                        <p class="descVideos"> En este segundo video, veremos las principales operaciones que se pueden realizar con los números enteros</p>
-                    </div>
-                </div>
+                    <label for="apellidos">Apellidos</label><br>
+                    <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required autocomplete="on"><br><br>
 
-                <div class="videos">
-                    <h3>Desigualdades de números enteros</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/G0o9qedyQU0"   > 
-                        </iframe>
-                        <p class="descVideos"> En este video se puede ver como se resuelven desigualdades de números enteros</p>
-                    </div>    
-                </div>
+                    <label for="email">Correo electrónico</label><br>
+                    <input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required autocomplete="on"><br><br>
+
+                    <label for="fechanacimiento">Fecha de Nacimiento</label><br>
+                    <input type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required autocomplete="on"><br><br>
+
+                    <label for="identificacion">Documento de Identificación</label><br>
+                    <input type="text" name="dni" id="dni" required autocomplete="on"><br>
+
+                    <p>Selecciona una opción</p><br>
+                    <input type="radio" id="admin" name="rol" value="admin">
+                    <label for="admin">Administrador</label><br>
+                    <input type="radio" id="prof" name="rol" value="prof">
+                    <label for="prof">Profesor</label><br>
+                    <input type="radio" id="estudiante" name="rol" value="estudiante">
+                    <label for="estudiante">Estudiante</label><br>
+
+                    <label for="universidad">Universidad</label><br>
+                    <input type="text" id="universidad" name="universidad" value="Universidad Carlos III de Madrid" readonly>
+
+
+
+                    <input type="submit" value="Submit">
+                    
+                </form>
             </div>
 
-            <div class="temas">
-                <h2>Tema 3   - Números racionales e irracionales</h2>
-                <img class="temaImg" src="./Images/numerosRacionales.png" alt="Imagen tema 2">
-                <p class="decripTema"> El conjunto de los números racionales se nombra con la letra Q, está formado
-                    por fracciones de números enteros y se define como Q = {a/b , con a, b ∈ Z , b 6= 0} .
-                    Obsérvese que se verifica la relación N ⊂ Z ⊂ Q .</p>
-
-                <p>
-                    También existen infinitos números que no pertenecen a Q, esto es todos aquellos que
-                    se expresan en forma decimal con infinitas cifras decimales no periódicas. Dichos
-                    números se llaman irracionales
-                </p>
-                <div class="videos">
-                    <h3>Diferencias entre números racionales e irracionales</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/rV2-jfe2hdE"   > 
-                        </iframe>
-                        <p class="descVideos"> Esta esla primera descripcion del primer video</p>
+            <div id="teoria"class="main col-6 col-s-9">
+                <div class="temas">
+                    <h2>Tema 1 - Números naturales</h2>
+                    <img class="temaImg" src="./Images/numeros-naturales-1024x683.jpg" alt="Imagen tema 2">
+                    <p class="decripTema"> El conjunto ordenado de los números naturales se nombra con la letra N, tiene
+                        infinitos elementos y se suele representar como N = {1, 2, 3, . . .}. Aquí las llaves
+                        indican que es un conjunto, del que se muestran los tres primeros elementos, y los
+                        puntos suspensivos representan los infinitos números naturales que, por razones obvias, no se pueden escribir en su totalidad.
+                    </p>
+    
+                    <div class="videos">
+                        <h3>¿Qué son los números naturales?</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/uqCO15pKGKo"   > 
+                            </iframe>
+                            <p class="descVideos"> En este video se puede observar una explicación de que son los números naturales y de donde han nacido</p>
+                        </div>
+                    </div>
+    
+                    <div class="videos">
+                        <h3>¿Cómo sumar números enteros</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/WAucYao8whY"   > 
+                            </iframe>
+                            <p class="descVideos"> En este video se puede observar una explicación detallada de como se hace la suma de números naturales</p>
+                        </div>    
+                    </div>
+    
+                    <div class="videos">
+                        <h3>¿Es el cero un número natural?</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/Q2zan_9zzg8"   > 
+                            </iframe>
+                            <p class="descVideos">En este video se hace una explicación de el gran dilema entre si el cero esta o no en los números naturales</p>
+                        </div>    
                     </div>
                 </div>
-
-                <div class="videos">
-                    <h3>Operaciones básicas de números racionales</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/vg9aec1ndBc"   > 
-                        </iframe>
-                        <p class="descVideos"> En este vídeo se prentende enseñar las operaciones principales que se puede realizar con los números racionales</p>
-                    </div>    
+                <div class="temas">
+                    <h2>Tema 2 - Números enteros </h2>
+                    <img class="temaImg" src="./Images/numeros.png" alt="Numeros enteros">
+                    <p class="decripTema"> El conjunto de los números enteros se nombra con la letra Z, esá formado por
+                        infinitos elementos y se describe como Z = {. . . , −3, −2, −1, 0, 1, 2, 3, . . .} . Vemos
+                        que Z contiene a N (esto es N ⊂ Z); además contiene al elemento 0 y a los valores
+                        correspondientes a los números naturales con signo negativo</p>
+    
+                    <div class="videos">
+                        <h3>¿Qué son los números enteros?</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/bqjzkZkVAiQ"   > 
+                            </iframe>
+                            <p class="descVideos"> Un video explicativo sobre que son los números enteros</p>
+                        </div>
+                    </div>
+    
+                    <div class="videos">
+                        <h3>Ejercicios de números enteros</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/UbqjPCAjUfg"   > 
+                            </iframe>
+                            <p class="descVideos"> En este segundo video, veremos las principales operaciones que se pueden realizar con los números enteros</p>
+                        </div>
+                    </div>
+    
+                    <div class="videos">
+                        <h3>Desigualdades de números enteros</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/G0o9qedyQU0"   > 
+                            </iframe>
+                            <p class="descVideos"> En este video se puede ver como se resuelven desigualdades de números enteros</p>
+                        </div>    
+                    </div>
                 </div>
-
-                <div class="videos">
-                    <h3>Breve acercaciœn a los numeros Reales</h3>
-                    <div class="video-content">
-                        <iframe src="https://www.youtube.com/embed/xOjQ3u7jSLQ"   > 
-                        </iframe>
-                        <p class="descVideos"> En este video se pretende hacer un resumen de todos los números vistos, y explicar que todos estan envueltos en los numeros Reales</p>
-                    </div>    
+    
+                <div class="temas">
+                    <h2>Tema 3   - Números racionales e irracionales</h2>
+                    <img class="temaImg" src="./Images/numerosRacionales.png" alt="Imagen tema 2">
+                    <p class="decripTema"> El conjunto de los números racionales se nombra con la letra Q, está formado
+                        por fracciones de números enteros y se define como Q = {a/b , con a, b ∈ Z , b 6= 0} .
+                        Obsérvese que se verifica la relación N ⊂ Z ⊂ Q .</p>
+    
+                    <p>
+                        También existen infinitos números que no pertenecen a Q, esto es todos aquellos que
+                        se expresan en forma decimal con infinitas cifras decimales no periódicas. Dichos
+                        números se llaman irracionales
+                    </p>
+                    <div class="videos">
+                        <h3>Diferencias entre números racionales e irracionales</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/rV2-jfe2hdE"   > 
+                            </iframe>
+                            <p class="descVideos"> Esta esla primera descripcion del primer video</p>
+                        </div>
+                    </div>
+    
+                    <div class="videos">
+                        <h3>Operaciones básicas de números racionales</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/vg9aec1ndBc"   > 
+                            </iframe>
+                            <p class="descVideos"> En este vídeo se prentende enseñar las operaciones principales que se puede realizar con los números racionales</p>
+                        </div>    
+                    </div>
+    
+                    <div class="videos">
+                        <h3>Breve acercaciœn a los numeros Reales</h3>
+                        <div class="video-content">
+                            <iframe src="https://www.youtube.com/embed/xOjQ3u7jSLQ"   > 
+                            </iframe>
+                            <p class="descVideos"> En este video se pretende hacer un resumen de todos los números vistos, y explicar que todos estan envueltos en los numeros Reales</p>
+                        </div>    
+                    </div>
                 </div>
+                
+            </div>
+
+            <div id="listadoestudiantes" class="main show col-6 col-s-9">
+                <h1 class="col-12 col-s-12">Alumnos</h1>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Andres Eduardo Jaime Perez</li>
+                            <li>100487672@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno2.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Gerardo Henriquez Fernandez</li>
+                            <li>100434672@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno3.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Andres Eduardo Tamayo Azpurua</li>
+                            <li>100496784@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno4.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Abril Capra</li>
+                            <li>100395743@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno5.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Ana Alvarez</li>
+                            <li>100434589@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno6.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Felix Lan</li>
+                            <li>100387654@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno7.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Cristina Herrero</li>
+                            <li>100312579@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno8.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Orianna Maita</li>
+                            <li>100356789@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno9.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Gabriela Delfino</li>
+                            <li>100379567@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="alumnos col-12 col-s-12">
+                    <img src="./Images/alumno10.jpg" alt="alumno">
+                    <div class="infEstudiante col-6 col-s-6">
+                        <ul>
+                            <li>Javier Aponte</li>
+                            <li>100326703@alumnos.uc3m.es</li>
+                            <li>
+                                <form>
+                                    <input type="text" placeholder="Envia un mensaje" name="name">
+                                    <button>Enviar</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="foro" class="main show col-6 col-s-9">
+                <h2>Foro de la asignatura</h2>   
+                <div class="tema col-s-12 col-12">
+                     <h4 class="titulo-tema col-7 col-s-7">Dudas sobre el temario</h4>
+                     <div class="cant-msg-icon col-2 col-s-2">
+                         <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
+                         <div>25</div>
+                     </div>
+                     <div class="fecha-tema col-3 col-s-3">06/10/2020</div>
+                </div>
+     
+                <div class="tema col-s-12 col-12">
+                     <h4 class="titulo-tema col-7 col-s-7">Dudas sobre ejercicios prácticos</h4>
+                     <div class="cant-msg-icon col-2 col-s-2">
+                         <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
+                         <div>15</div>
+                     </div>
+                     <div class="fecha-tema col-3 col-s-3">02/10/2020</div>
+                 </div>
+                 
+                 <div class="tema col-s-12 col-12">
+                     <h4 class="titulo-tema col-7 col-s-7">Clases de recuperación</h4>
+                     <div class="cant-msg-icon col-2 col-s-2">
+                         <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
+                         <div>3</div>
+                     </div>
+                     <div class="fecha-tema col-3 col-s-3">28/09/2020</div>
+                 </div>
+     
+                 <div class="tema col-s-12 col-12">
+                     <h4 class="titulo-tema col-7 col-s-7">Problemas de coincidencia de horarios</h4>
+                     <div class="cant-msg-icon col-2 col-s-2">
+                         <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
+                         <div>99</div>
+                     </div>
+                     <div class="fecha-tema col-3 col-s-3">15/09/2020</div>
+                 </div>
+     
+                 <div class="tema col-s-12 col-12">
+                     <h4 class="titulo-tema col-7 col-s-7">Bienvenida a la asignatura</h4>
+                     <div class="cant-msg-icon col-2 col-s-2">
+                         <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
+                         <div>15</div>
+                     </div>
+                     <div class="fecha-tema col-3 col-s-3">13/09/2020</div>
+                 </div>
+            </div>
+
+            <div class="main show col-6 col-s-9" id="calificaciones">
+                <h2>Calificaciones</h2>
+                
+                <table class="tabla col-12 col-s-12">
+                    <tr>
+                        <th>Alumnos</th>
+                        <th>Actividad 1</th>
+                        <th>Actividad 2</th>
+                        <th>Actividad 3</th>
+                    </tr>
+                    <tr>
+                        <th>Andres Eduardo Jaime Perez</th>
+                        <th>1,17</th>
+                        <th>5,18</th>
+                        <th>9,54</th>
+                    </tr>
+                    <tr>
+                        <th>Gerardo Henriquez Fernandez</th>
+                        <th>9,75</th>
+                        <th>5,76</th>
+                        <th>7,87</th>
+                    </tr>
+                    <tr>
+                        <th>Andres Eduardo Tamayo Azpurua</th>
+                        <th>3,75</th>
+                        <th>10,00</th>
+                        <th>2,10</th>
+                    </tr>
+                    <tr>
+                        <th>Abril Capra</th>
+                        <th>8,54</th>
+                        <th>6,09</th>
+                        <th>2,98</th>
+                    </tr>
+                    <tr>
+                        <th>Ana Alvarez</th>
+                        <th>10,00</th>
+                        <th>4,98</th>
+                        <th>5,00</th>
+                    </tr>
+                    <tr>
+                        <th>Felix Lan</th>
+                        <th>9,75</th>
+                        <th>9,76</th>
+                        <th>8,87</th>
+                    </tr>
+                    <tr>
+                        <th>Cristina Herrero</th>
+                        <th>6,06</th>
+                        <th>3,98</th>
+                        <th>8,68</th>
+                    </tr>
+                    <tr>
+                        <th>Orianna Maita</th>
+                        <th>4,50</th>
+                        <th>4,87</th>
+                        <th>7,23</th>
+                    </tr>
+                    <tr>
+                        <th>Gabriela Delfino</th>
+                        <th>10,00</th>
+                        <th>10,00</th>
+                        <th>9,81</th>
+                    </tr>
+                    <tr>
+                        <th>Javier Aponte</th>
+                        <th>2,65</th>
+                        <th>8,74</th>
+                        <th>2,98</th>
+                    </tr>
+                </table>
+               
+                 
             </div>
             
+            <div class="main show col-6 col-s-9" id="misAsignaturas">
+            </div>
+
         </div>
+
         <!-- Noticias de la parte derecha-->
         <div class="news col-3 col-s-9"> 
             <div class="noticias">

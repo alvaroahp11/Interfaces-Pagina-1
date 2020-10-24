@@ -1,6 +1,6 @@
 
 jQuery('document').ready(function($){
-    var menuBtn = $('.menu-icon');
+    var menuBtn = $('#menu-icon');
     var menu = $('#menu');
 
     menuBtn.click(function(){
