@@ -1,0 +1,168 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+* a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    background-color: #6fccba;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+/* Telefonos */
+[class*="col-"] {
+    width: 100%;
+}
+
+
+/* Header*/
+
+.header {
+    margin: 0;
+    padding: 15px;
+    background-color: #ffbb59;
+}
+
+.logo {
+    padding: 0 15% 0 15%;
+    margin: 0;
+    width: 70%;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
+}
+.menu-header{
+    padding: 5%;
+    width: 90%;
+}
+
+.menu-header ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;  
+}
+
+.menu-header li{
+    text-align: center;
+    padding: 5% 0% 5% 0%;
+    margin-bottom: 7px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
+
+
+/* Menu izquierdo */
+
+
+/* Contenido central Main */
+.temas{
+    padding-bottom: 30px;
+}
+
+.temaImg{
+    width: 100%;
+
+}
+
+.videos {
+    width: 100%;
+}
+
+.videos iframe{
+    width: 100%;
+    height: 15rem;
+}
+
+.decripTema {
+    text-align: justify;
+}
+
+.videos h3{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+
+/* Footer */
+
+
+/* ---------------------------------------------------- */
+/* Tablets */
+@media only screen and (min-width: 600px) {
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+
+    /* Header */
+   
+    /* menu izquirdo */
+    
+
+    /* main */
+
+    
+    
+    /* news */
+
+
+    /* footer */
+
+  }
+
+/* Computadora */
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    
+    /* Header */
+    
+    /* news */
+
+    /* footer */
+
+}
+
+

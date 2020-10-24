@@ -4,11 +4,7 @@ jQuery('document').ready(function($){
     var menu = $('#menu');
 
     menuBtn.click(function(){
-        if (menu.hasClass('show')){
-            menu.removeClass('show');
-        }else{
-            menu.addClass('show'); 
-        } 
+        menu.toggle(500);
     });
 
     var notiEventBtn = $('.tablet-news');
@@ -17,13 +13,11 @@ jQuery('document').ready(function($){
     var notiEventDisplay = $('.news');
 
     notiEventBtn.click(function($){
-        if (mainDisplay.hasClass('show')){
-            mainDisplay.removeClass('show');
-            notiEventDisplay.addClass('show');
+        mainDisplay.toggle(100);
+        notiEventDisplay.toggle(100);
+        if (mainDisplay.css('display') == 'none' ){
             notiEventText.text('Temario');
         }else{
-            mainDisplay.addClass('show');
-            notiEventDisplay.removeClass('show');
             notiEventText.text('Noticias/Eventos');
 
         }
