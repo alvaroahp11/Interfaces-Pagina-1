@@ -74,6 +74,7 @@ body {
 }
 
 .menu-header li{
+    align-items: center;
     font-size: 12px;
     text-align: center;
     padding: 2% 0% 2% 0%;
@@ -86,7 +87,7 @@ body {
 /* Menu izquierdo */
 #menu {
     padding: 2%;
-    /* display: none; */
+    display: none;
 }
 #menu h2{
     font-size: 30px;
@@ -104,10 +105,18 @@ body {
 
 /* Contenido central Main */
 
+#iniciarSesion {
+
+}
+
 #registrarse {
+    display: none;
 }
 
 /* Temario */
+#teoria {
+    display: none;
+}
 .temas{
     padding-bottom: 30px;
 }
@@ -149,6 +158,12 @@ body {
 /* calificaciones */
 
 #calificaciones {
+    display: none;
+}
+
+/* news */
+
+.news {
     display: none;
 }
 
