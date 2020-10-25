@@ -51,13 +51,13 @@ body {
 }
 
 .logo {
-    padding: 0 25% 0 25%;
+    padding: 0 30%;
     margin: 0;
 }
 
 .header h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 5px;
     margin: 0;
     padding: 0;
@@ -105,10 +105,55 @@ body {
 
 /* Contenido central Main */
 
-#iniciarSesion {
+/* iniciar sesion */
 
+#iniciarSesion {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-areas: ". ttle ttle ."
+                        ". lb-email lb-email ."
+                        ". tx-email tx-email ."
+                        ". lb-pass lb-pass ."
+                        ". tx-pass tx-pass ."
+                        ". bt-reg bt-ini ."
+    ;
+    padding: 5%;
+    column-gap: 1em;
+}
+#iniciarSesion h2 {
+    grid-area: ttle;
+    text-align: center ;
+    padding-bottom: 7%;
 }
 
+#label-email {
+    grid-area: lb-email;
+}
+
+#ini-email {
+    grid-area: tx-email;
+    margin-bottom: 5%;
+}
+
+#label-pass {
+    grid-area: lb-pass;
+}
+
+#ini-password {
+    grid-area: tx-pass;
+    margin-bottom: 7%;
+}
+
+#iniciarBtn {
+    grid-area: bt-ini;
+}
+
+#registraseBtn {
+    grid-area: bt-reg;
+}
+
+
+/* Registrarse */
 #registrarse {
     display: none;
 }
@@ -173,6 +218,7 @@ body {
 .footer{
     background-color: black;
     color: whitesmoke;
+    bottom: 0;
 }
 
 .UC3M{
