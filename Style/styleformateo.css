@@ -158,7 +158,7 @@ body {
 
 /* Registrarse */
 #registrarse form {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-areas:". registrarseh registrarseh ."
                         ". nusuario nusuario ."
@@ -190,6 +190,7 @@ body {
                         ". sumitBtn borrarBtn ."
                         
                         ;
+    column-gap: 1em;
 }
 
 #registrarse h2{
@@ -308,6 +309,18 @@ body {
 #borrarBtn{
     grid-area: borrarBtn; 
 }
+
+.stylereg{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
 
 
 
