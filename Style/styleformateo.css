@@ -42,7 +42,7 @@ body {
 
 .header {
     margin: 0;
-    padding: 3%;
+    padding: 10px;
     background-color: #ffbb59;
 }
 
@@ -379,7 +379,8 @@ body {
 /* Foro */
 
 #foro {
-    
+    display: none;
+
 }
 
 /* calificaciones */
@@ -465,7 +466,7 @@ body {
 
     /* Header */
     .header{
-        max-height: 150px;
+     padding: 20px;
     }
     #menu-icon   {
         display: none ;
@@ -473,12 +474,12 @@ body {
 
     .logo {
         padding: 0 5%;
-        max-height: 80px;
-        max-width: 235px;
+        /* max-height: 80px;
+        max-width: 235px; */
     }
 
     .header h1 {
-        padding: 3% 0;
+        padding: 3 0;
         max-height: 80px;
     }
 
