@@ -451,12 +451,27 @@ body {
 
 
     /* Header */
+    .header{
+        max-height: 150px;
+    }
     #menu-icon   {
         display: none ;
     }
 
     .logo {
-        padding: 0;
+        padding: 0 5%;
+        max-height: 80px;
+        max-width: 235px;
+    }
+
+    .header h1 {
+        padding: 3% 0;
+        max-height: 80px;
+    }
+
+    .menu-header{
+        padding: 3.3% 0;
+        max-height: 80px;
     }
    
     /* menu izquirdo */
