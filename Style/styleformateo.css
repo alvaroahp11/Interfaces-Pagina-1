@@ -108,7 +108,8 @@ body {
 /* iniciar sesion */
 
 #iniciarSesion {
-    display: grid;
+   
+    display: none;
     grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-areas: ". ttle ttle ."
                         ". lb-email lb-email ."
@@ -153,10 +154,165 @@ body {
 }
 
 
+
+
 /* Registrarse */
-#registrarse {
-    display: none;
+#registrarse form {
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+    grid-template-areas:". registrarseh registrarseh ."
+                        ". nusuario nusuario ."
+                        ". usuario usuario ."
+                        ". nnia nnia ."
+                        ". nia nia ."
+                        ". ncontraseña ncontraseña ."
+                        ". contraseña contraseña ."
+                        ". nnombre nnombre ."
+                        ". nombre nombre ."
+                        ". napellidos napellidos ."
+                        ". apellidos apellidos ."
+                        ". nemail nemail ."
+                        ". email email ."
+                        ". nfechanacimiento nfechanacimiento ."
+                        ". fnacimiento fnacimiento ."
+                        ". nidentificacion nidentificacion ."
+                        ". dni dni ."
+                        ". nrol nrol ."
+                        ". rol rol ."
+                        ". ncarrera ncarrera ."
+                        ". carrera carrera ."
+                        ". nuniversidad nuniversidad ."
+                        ". universidad universidad ."
+                        ". nidioma nidioma ."
+                        ". idioma idioma ."
+                        ". nterminosycondiciones nterminosycondiciones ."
+                        ". terminosycondiciones terminosycondiciones ."
+                        ". sumitBtn borrarBtn ."
+                        
+                        ;
 }
+
+#registrarse h2{
+    grid-area: registrarseh;
+    text-align: center;
+}
+
+#nusuario{
+    grid-area: nusuario ;
+}
+
+#usuario{
+    grid-area: usuario;
+}
+
+#nnia{
+    grid-area: nnia;
+}
+
+#nia{
+    grid-area: nia;
+}
+
+#ncontraseña{
+    grid-area: ncontraseña;
+}
+
+#reg-password{
+    grid-area: contraseña;
+}
+
+#nnombre{
+    grid-area: nnombre;
+}
+
+#nombre{
+    grid-area: nombre;
+}
+
+#napellidos{
+    grid-area: napellidos;
+}
+
+#apellidos{
+    grid-area: apellidos;
+}
+
+#nemail{
+    grid-area: nemail;
+}
+
+#reg-email{
+    grid-area: email;
+}
+
+#nfechanacimiento{
+    grid-area: nfechanacimiento;
+}
+
+#fnacimiento{
+    grid-area: fnacimiento;
+}
+
+
+#nidentificacion{
+    grid-area: nidentificacion;
+}
+
+#dni {
+    grid-area: dni;
+}
+
+#nrol{
+    grid-area: nrol;
+}
+
+#rol{
+    grid-area: rol;
+}
+
+#ncarrera{
+    grid-area: ncarrera;
+}
+
+#carrera{
+    grid-area: carrera;
+}
+
+#nuniversidad {
+    grid-area: nuniversidad;
+}
+
+#universidad {
+    grid-area: universidad;
+}
+
+#nidioma{
+    grid-area: nidioma;
+}
+
+#idioma{
+    grid-area: idioma;
+}
+
+#nterminosycondiciones {
+    grid-area: nterminosycondiciones;
+}
+
+#terminosycondiciones{
+    grid-area: terminosycondiciones;
+}
+
+#sumitBtn{
+    grid-area: sumitBtn;
+}
+#borrarBtn{
+    grid-area: borrarBtn; 
+}
+
+
+
+
+
 
 /* Temario */
 #teoria {

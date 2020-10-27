@@ -46,10 +46,10 @@
             <div id="iniciarSesion" class="main col-6 col-s-9">
                 <h2>Inicia Sesión</h2>
 
-                <label id="label-email" for="email">Correo electrónico</label>
+                <label for="label-email">Correo electrónico</label>
                 <input type="text" name="email" id="ini-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required >
                 
-                <label id="label-pass" for="contraseña">Contraseña</label>
+                <label for="label-pass">Contraseña</label>
                 <input id="ini-password" type="password" name="contraseña" placeholder="Contraseña" required>
                 
                 <input id="iniciarBtn" type="button" value="Iniciar sesión">
@@ -59,57 +59,67 @@
 
             <div id="registrarse" class="main col-6 col-s-9">
                 <form autocomplete="on" action="./action_page.php">
-                    <label for="usuario">Nombre de Usuario</label><br>
-                    <input id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required ><br><br>
+                    <h2>Registrarse</h2>
+                    <label for="nusuario" >Nombre de Usuario</label>
+                    <input id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required >
 
-                    <label for="nia">NIA</label><br>
-                    <input id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required ><br><br>
+                    <label for="nnia" >NIA</label>
+                    <input id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required >
 
-                    <label for="contraseña">Contraseña</label><br>
-                    <input id="reg-password" type="password" name="contraseña" pattern="[a-z0-9]+" maxlength="8" title="La contraseña debe de estar compuesta de letras minúsculas y números" placeholder="Contraseña" required><br><br>
+                    <label for="ncontraseña" >Contraseña</label>
+                    <input id="reg-password" type="password" name="contraseña" pattern="[a-z0-9]+" maxlength="8" title="La contraseña debe de estar compuesta de letras minúsculas y números" placeholder="Contraseña" required>
 
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required ><br><br>
+                    <label for="nnombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required >
 
-                    <label for="apellidos">Apellidos</label><br>
-                    <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required ><br><br>
+                    <label for="napellidos">Apellidos</label>
+                    <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required >
 
-                    <label for="email">Correo electrónico</label><br>
-                    <input type="text" name="email" id="reg-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required ><br><br>
+                    <label for="nemail">Correo electrónico</label>
+                    <input type="text" name="email" id="reg-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required >
 
-                    <label for="fechanacimiento">Fecha de Nacimiento</label><br>
-                    <input type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required ><br><br>
+                    <label for="nfechanacimiento">Fecha de Nacimiento</label>
+                    <input type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required >
 
-                    <label for="identificacion">Documento de Identificación</label><br>
-                    <input type="text" name="dni" id="dni" required  placeholder="99999999C"><br>
+                    <label for="nidentificacion">Documento de Identificación</label>
+                    <input type="text" name="dni" id="dni" required  placeholder="99999999C">
 
                     
-                    <label for="rol">Escoge tu rol</label>
+                    <label for="nrol">Escoge tu rol</label>
                     <select name="rol" id="rol">
                         <option value="Administrador">Administrador</option>
                         <option value="Profesor">Profesor</option>
                         <option value="Estudiante">Estudiante</option>
                     </select>
 
-                    <label for="carrera">Escoge tu carrera</label>
+                    <label for="ncarrera">Escoge tu carrera</label>
                     <select name="carrera" id="carrera">
                         <option value="informática">Grado en ingeniería informática</option>
                         <option value="derecho">Grado en derecho</option>
                         <option value="industrial">Grado en ingeniería industrial</option>
                     </select>
 
-                    <label for="universidad">Universidad</label><br>
+                    <label for="nuniversidad">Universidad</label>
                     <input type="text" id="universidad" name="universidad" value="Universidad Carlos III de Madrid" readonly>
 
-                    <label for="idioma">Escoge tu idioma</label>
-                    <select name="idioma" id="idioma">
+                    <label for="nidioma">Escoge tu idioma</label>
+                    <select id="idioma" name="idioma">
                         <option value="ingles">English</option>
                         <option value="español">Español</option>
                         <option value="italiano">Italiano</option>
                     </select>
 
-                    <input id="sumitBtn" type="submit" value="Registrarse">
+                    <label for="nterminosycondiciones">
+                        <input id="terminosycondiciones" type="radio" name="terminosycondiciones" value="terminosycondiciones" required>
+                        Acepta los términos y condiciones
+                    </label>
+
+
+                    <input id="sumitBtn" type="submit" value="Guardar">
+                    <button id="borrarBtn">Borrar</button>
+                    
                 </form>
+                    
             </div>
 
             <div id="teoria"class="main col-6 col-s-9">
