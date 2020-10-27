@@ -330,13 +330,22 @@ body {
 /* Temario */
 #teoria {
     display: none;
+   padding: 4%;
 }
+
+#titprincipal{
+    margin-bottom: 10px;
+}
+
+
+
 .temas{
     padding-bottom: 30px;
 }
 
 .temaImg{
     width: 100%;
+    margin-bottom: 20px;
 
 }
 
@@ -354,8 +363,12 @@ body {
 }
 
 .videos h3{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 15px;
+}
+
+.video-content p{ 
+    padding-top: 20px;
 }
 
 /* listado de estudiantes */
@@ -366,7 +379,7 @@ body {
 /* Foro */
 
 #foro {
-    display: none;
+    
 }
 
 /* calificaciones */
