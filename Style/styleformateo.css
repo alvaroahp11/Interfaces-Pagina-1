@@ -438,6 +438,13 @@ body {
 
 
     /* Header */
+    #menu-icon   {
+        display: none ;
+    }
+
+    .logo {
+        padding: 0;
+    }
    
     /* menu izquirdo */
     

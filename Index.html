@@ -12,13 +12,13 @@
     <body>
         <!-- Header de la página-->
         <div class="header col-12 col-s-12">
-            <img id="menu-icon" src="./Images/menuIcon.png" alt="icono del apertura del menu">  
+            <img id="menu-icon"  src="./Images/menuIcon.png" alt="icono del apertura del menu">  
             <img class="logo col-3 col-s-3" src="./Images/logo-con-fondo.jpg" alt="logo">
             
             
-            <h1 class="col-4 col-s-5">Cálculo</h1>
+            <h1 class="col-5 col-s-5">Cálculo</h1>
             
-            <nav class="menu-header col-5 col-s-4">
+            <nav class="menu-header col-4 col-s-4">
                 <ul>
                     <li class="col-4 col-s-4"><a href="./Index.html">Inico</a></li>
                     <li class="col-4 col-s-4">Iniciar sesion</li>
@@ -60,56 +60,56 @@
             <div id="registrarse" class="main col-6 col-s-9">
                 <form autocomplete="on" action="./action_page.php">
                     <h2>Registrarse</h2>
-                    <label for="nusuario" >Nombre de Usuario</label>
+                    <label for="nusuario" id="nusuario">Nombre de Usuario</label>
                     <input id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required >
 
-                    <label for="nnia" >NIA</label>
+                    <label for="nnia" id="nnia">NIA</label>
                     <input id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required >
 
-                    <label for="ncontraseña" >Contraseña</label>
+                    <label for="ncontraseña" id="ncontraseña">Contraseña</label>
                     <input id="reg-password" type="password" name="contraseña" pattern="[a-z0-9]+" maxlength="8" title="La contraseña debe de estar compuesta de letras minúsculas y números" placeholder="Contraseña" required>
 
-                    <label for="nnombre">Nombre</label>
+                    <label for="nnombre" id="nnombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required >
 
-                    <label for="napellidos">Apellidos</label>
+                    <label for="napellidos" id="napellidos">Apellidos</label>
                     <input type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required >
 
-                    <label for="nemail">Correo electrónico</label>
+                    <label for="nemail" id="nemail">Correo electrónico</label>
                     <input type="text" name="email" id="reg-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required >
 
-                    <label for="nfechanacimiento">Fecha de Nacimiento</label>
+                    <label for="nfechanacimiento" id="nfechanacimiento">Fecha de Nacimiento</label>
                     <input type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required >
 
-                    <label for="nidentificacion">Documento de Identificación</label>
+                    <label for="nidentificacion" id="nidentificacion">Documento de Identificación</label>
                     <input type="text" name="dni" id="dni" required  placeholder="99999999C">
 
                     
-                    <label for="nrol">Escoge tu rol</label>
+                    <label for="nrol" id="nrol">Escoge tu rol</label>
                     <select name="rol" id="rol">
                         <option value="Administrador">Administrador</option>
                         <option value="Profesor">Profesor</option>
                         <option value="Estudiante">Estudiante</option>
                     </select>
 
-                    <label for="ncarrera">Escoge tu carrera</label>
+                    <label id="ncarrera" for="ncarrera">Escoge tu carrera</label>
                     <select name="carrera" id="carrera">
                         <option value="informática">Grado en ingeniería informática</option>
                         <option value="derecho">Grado en derecho</option>
                         <option value="industrial">Grado en ingeniería industrial</option>
                     </select>
 
-                    <label for="nuniversidad">Universidad</label>
+                    <label id="nuniversidad" for="nuniversidad">Universidad</label>
                     <input type="text" id="universidad" name="universidad" value="Universidad Carlos III de Madrid" readonly>
 
-                    <label for="nidioma">Escoge tu idioma</label>
+                    <label id="nidioma" for="nidioma">Escoge tu idioma</label>
                     <select id="idioma" name="idioma">
                         <option value="ingles">English</option>
                         <option value="español">Español</option>
                         <option value="italiano">Italiano</option>
                     </select>
 
-                    <label for="nterminosycondiciones">
+                    <label id="nterminosycondiciones" for="nterminosycondiciones">
                         <input id="terminosycondiciones" type="radio" name="terminosycondiciones" value="terminosycondiciones" required>
                         Acepta los términos y condiciones
                     </label>
