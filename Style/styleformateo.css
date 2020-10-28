@@ -11,6 +11,7 @@
     color: black;
 }
 
+
 html {
     width: 100%;
 }
@@ -76,7 +77,11 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
     background-color:  #f2f2f2;
 }
+/* main */
 
+#main{
+    clear: both;
+}
 
 /* Menu izquierdo */
 #menu {
@@ -98,7 +103,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Contenido central Main */
+/* Contenido central del Main */
 
 /* iniciar sesion */
 
@@ -534,9 +539,9 @@ body {
 
 /* Footer */
 .footer{
+    clear: both; 
     background-color: black;
     color: whitesmoke;
-    bottom: 0;
 }
 
 .UC3M{
@@ -625,11 +630,13 @@ body {
         padding: 5px;
        
     }
-   
+
+
+   /* main */
     /* menu izquirdo */
     
 
-    /* main */
+    
 
     
     
