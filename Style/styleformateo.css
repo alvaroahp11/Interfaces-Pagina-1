@@ -113,8 +113,7 @@ body {
                         ". tx-pass tx-pass ."
                         ". bt-reg bt-ini ."
     ;
-    margin: 5%;
-    padding: 3% 0;
+    padding:  15px;
     column-gap: 1em;
 
     border-radius: 5px;
@@ -130,7 +129,7 @@ body {
 
 #label-email {
     grid-area: lb-email;
-    max-width: 100%;
+    
 }
 
 #ini-email {
@@ -330,7 +329,7 @@ body {
 /* Temario */
 #teoria {
     display: none;
-   padding: 4%;
+    padding: 4%;
 }
 
 #titprincipal{
@@ -374,7 +373,7 @@ body {
 /* listado de estudiantes */
 #listadoestudiantes {
     display: none;
-padding: 10px;
+    padding: 10px;
 }
 
 #listadoestudiantes h1{
@@ -437,6 +436,9 @@ padding: 10px;
 }
 
 /* Foro */
+#foro {
+    display: none;
+}
 
 #foro h2 {
     text-align: center;
