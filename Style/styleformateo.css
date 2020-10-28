@@ -102,6 +102,11 @@ body {
 
 /* iniciar sesion */
 
+/* #iniContainer{
+    padding: 40px;
+    max-height: fit-content;
+} */
+
 #iniciarSesion {
    
     display: grid;
@@ -114,6 +119,7 @@ body {
                         ". bt-reg bt-ini ."
     ;
     padding:  15px;
+    /* margin: 15px; no le puedo poner margen por que se vuelve loco*/
     column-gap: 1em;
 
     border-radius: 5px;

@@ -1,7 +1,7 @@
 footer = function(){ 
 
-    alto_navegador= $(window).height();
-    alto_documento= $(document).height(); 
+    alto_navegador= $(window).height() - $('.footer').height();
+    alto_documento= $(document).height() - $('.footer').height(); 
    
     if (alto_documento>alto_navegador){
         $('.footer').css({'position':"relative"});
