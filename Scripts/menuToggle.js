@@ -1,17 +1,17 @@
-footer = function(){ 
+// footer = function(){ 
 
-    alto_navegador= $(window).height() - $('.footer').height();
-    alto_documento= $(document).height() - $('.footer').height(); 
+//     alto_navegador= $(window).height() - $('.footer').height();
+//     $('').css height() ; 
    
-    if (alto_documento>alto_navegador){
-        $('.footer').css({'position':"relative"});
+//     if (alto_documento>=alto_navegador){
+//         $('.footer').css({'position':"relative"});
           
-    }
-    else{
-        $('.footer').css({'position':"fixed"});
+//     }
+//     else{
+//         $('.footer').css({'position':"fixed"});
         
-    } 
-}
+//     } 
+// }
 
 togglePosition = function() {
     var x = window.matchMedia("(max-width: 600px)");
@@ -28,13 +28,12 @@ togglePosition = function() {
 }
 
 jQuery('document').ready(function($){
-    footer();
+
     var menuBtn = $('#menu-icon');
     var menu = $('#menu');
 
     menuBtn.click(function(){
         menu.toggle(500);
-        togglePosition();
     });
 
     var notiEventBtn = $('.tablet-news');
