@@ -48,6 +48,12 @@ body {
 
 #menu-icon {
     display: block;
+    background-color: #ffbb59;
+    border: none;
+}
+
+#menu-icon::after{
+    border: none;
 }
 
 .logo {
@@ -384,7 +390,7 @@ body {
 
 /* listado de estudiantes */
 #listadoestudiantes {
-    display: none;
+    /* display: none; */
     padding: 10px;
 }
 
@@ -450,7 +456,7 @@ body {
 
 /* Foro */
 #foro {
-    /* display: none; */
+    display: none;
     padding: 20px;
 }
 
@@ -499,6 +505,7 @@ body {
 }
 
 .foroalumnos{
+    display: none;
     padding: 10px;
 }
 

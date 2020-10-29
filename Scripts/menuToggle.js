@@ -16,6 +16,8 @@ jQuery('document').ready(function($){
 
     menuBtn.click(function(){
         menu.toggle(500);
+        // window.location.href = "mailto:gerardohb99@gmail.com?subject=Subject&body=message%20goes%20here";
+
     });
 
     var notiEventBtn = $('.tablet-news');
@@ -23,7 +25,7 @@ jQuery('document').ready(function($){
     var mainDisplay = $('.main');
     var notiEventDisplay = $('.news');
 
-    notiEventBtn.click(function($){
+    notiEventBtn.click(function(){
         mainDisplay.toggle(100);
         notiEventDisplay.toggle(100);
         if (mainDisplay.css('display') == 'none' ){
@@ -34,6 +36,7 @@ jQuery('document').ready(function($){
         }
     });
 
+    var sendBtn = $('.sendBtn');
 
     $(function(){
         $('#publicartema1').click(function(){
@@ -66,6 +69,10 @@ jQuery('document').ready(function($){
         });
     });
 
+    sendBtn.click(function(){ 
+        var mailtext = $(this).parent().children('.correoAl').text();
+        window.location.href = "mailto:" + mailtext + "?subject=Subject";
+    });
    
     
         
