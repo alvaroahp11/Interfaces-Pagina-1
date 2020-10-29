@@ -20,9 +20,9 @@
             
             <nav class="menu-header col-4 col-s-4">
                 <ul>
-                    <li class="col-4 col-s-4"><a href="./Index.html">Inico</a></li>
+                    <li id="menuHInicio" class="col-4 col-s-4">Inico</li>
                     <li id="menuHIni" class="col-4 col-s-4">Iniciar sesion</li>
-                    <!-- <li class="col-4 col-s-4">Comentarios</li> -->
+                    <li id="menuHReg" class="col-4 col-s-4">Registrarse</li>
                 </ul>
             </nav> 
         </div>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div id="registrarse" class="mid col-12 col-s-12">
-                    <form autocomplete="on" action="./action_page.php">
+                    <form id="registrarseForm" autocomplete="on" action="">
                         <h2>Registrarse</h2>
                         <label for="nusuario" id="nusuario">Nombre de Usuario</label>
                         <input class="stylereg" id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required >
@@ -123,12 +123,12 @@
                         </select>
 
                         <label id="nterminosycondiciones" for="nterminosycondiciones">
-                            <input id="terminosycondiciones" type="radio" name="terminosycondiciones" value="terminosycondiciones" required>
                             Acepta los términos y condiciones
                         </label>
+                        <input id="terminosycondiciones" type="checkbox" name="terminosycondiciones" value="terminosycondiciones" required>
 
 
-                        <input class="stylereg" id="sumitBtn" type="submit" value="Guardar">
+                        <input class="stylereg" id="sumitBtn" type="button" value="Guardar">
                     
                         <input class="stylereg" id="borrarBtn" type="button" value="Borrar">
                         
@@ -608,24 +608,25 @@
 
             <!-- Noticias de la parte derecha-->
             <div class="news col-3 col-s-4"> 
-                <div class="noticias">
-                    <h4>Noticias</h4>
-                    <ul>
-                        <li>25/09 - Publicado las notas de la guía 1</li>
-                        <li>21/09 - Publicado contenido audiovisual del temario de la asignatura</li>
-                        <li>15/09 - Publicado los ejercicios vistos en clases (Completar la guía 1 en casa)</li>
-                        <li>14/09 - Publicados todos los temas de la asignatura</li>
-                    </ul>
+                <div id="newsIn" class="col-12 col-s-12">
+                    <div class="noticias">
+                        <h4>Noticias</h4>
+                        <ul>
+                            <li>25/09 - Publicado las notas de la guía 1</li>
+                            <li>21/09 - Publicado contenido audiovisual del temario de la asignatura</li>
+                            <li>15/09 - Publicado los ejercicios vistos en clases (Completar la guía 1 en casa)</li>
+                            <li>14/09 - Publicados todos los temas de la asignatura</li>
+                        </ul>
+                    </div>
+                    <div class="eventos">
+                        <h4>Eventos</h4>
+                        <ul>
+                            <li>01/10 - Primer parcial correspondiente de los temas 1 y 2</li>
+                            <li>20/09 - Fecha límite guía 1</li>
+                            <li>13/09 - Mañana es el inicio de clases, y tendremos nuestra primera sesión</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="eventos">
-                    <h4>Eventos</h4>
-                    <ul>
-                        <li>01/10 - Primer parcial correspondiente de los temas 1 y 2</li>
-                        <li>20/09 - Fecha límite guía 1</li>
-                        <li>13/09 - Mañana es el inicio de clases, y tendremos nuestra primera sesión</li>
-                    </ul>
-                </div>
-
             </div>
 
         </div>

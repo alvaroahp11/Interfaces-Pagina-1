@@ -20,6 +20,14 @@ jQuery('document').ready(function($){
         menu.toggle(500);
     });
 
+    var menuHInicioBtn = $('#menuHInicio');
+    var inicioPrincipal = $('#inicio');
+
+    menuHInicioBtn.click(function(){
+        allMid.hide();
+        inicioPrincipal.show();
+    });
+
     var menuHIniBtn = $('#menuHIni');
     var iniciarSesionPrincipal = $('#iniContainer');
 
@@ -28,30 +36,39 @@ jQuery('document').ready(function($){
         iniciarSesionPrincipal.show()
     });
 
+    var menuHRegBtn = $('#menuHReg');
     var iniRegBtn = $('#registraseBtn');
     var registrarsePrincipal = $('#registrarse');
+
+    menuHRegBtn.click(function(){
+        allMid.hide();
+        registrarsePrincipal.show();
+    });
 
     iniRegBtn.click(function(){
         allMid.hide();
         registrarsePrincipal.show();
     });
 
+    var clearBTn = $('#borrarBtn');
 
-    // var notiEventBtn = $('.tablet-news');
-    // var notiEventText = $('.tablet-news a')
-    // var mainDisplay = $('.main');
-    // var notiEventDisplay = $('.news');
+    clearBTn.click(function(){
+        $('#registrarseForm')[0].reset();
+    });
 
-    // notiEventBtn.click(function(){
-    //     mainDisplay.toggle(100);
-    //     notiEventDisplay.toggle(100);
-    //     if (mainDisplay.css('display') == 'none' ){
-    //         notiEventText.text('Temario');
-    //     }else{
-    //         notiEventText.text('Noticias/Eventos');
+    var regSumitBtn = $('#sumitBtn');
 
-    //     }
-    // });
+    regSumitBtn.submit(function(){
+        // var d = new Date();
+        // var expires = d.getTime() + (3*24*60*60*1000); 
+
+        // document.cookie = "pepe=pepe;" + expires + ";path=/";
+        var regInf = $('#registrarseForm').serialize();
+        console.log(regInf);
+    });
+
+
+
 
     var sendBtn = $('.sendBtn');
 
