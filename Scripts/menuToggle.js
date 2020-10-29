@@ -6,6 +6,8 @@ footer = function(){
 
 
 jQuery('document').ready(function($){
+    var allMid = $('.mid')
+
     footer();
     $( window ).resize(function() {
         footer();
@@ -16,25 +18,40 @@ jQuery('document').ready(function($){
 
     menuBtn.click(function(){
         menu.toggle(500);
-        // window.location.href = "mailto:gerardohb99@gmail.com?subject=Subject&body=message%20goes%20here";
-
     });
 
-    var notiEventBtn = $('.tablet-news');
-    var notiEventText = $('.tablet-news a')
-    var mainDisplay = $('.main');
-    var notiEventDisplay = $('.news');
+    var menuHIniBtn = $('#menuHIni');
+    var iniciarSesionPrincipal = $('#iniContainer');
 
-    notiEventBtn.click(function(){
-        mainDisplay.toggle(100);
-        notiEventDisplay.toggle(100);
-        if (mainDisplay.css('display') == 'none' ){
-            notiEventText.text('Temario');
-        }else{
-            notiEventText.text('Noticias/Eventos');
-
-        }
+    menuHIniBtn.click(function(){
+        allMid.hide();
+        iniciarSesionPrincipal.show()
     });
+
+    var iniRegBtn = $('#registraseBtn');
+    var registrarsePrincipal = $('#registrarse');
+
+    iniRegBtn.click(function(){
+        allMid.hide();
+        registrarsePrincipal.show();
+    });
+
+
+    // var notiEventBtn = $('.tablet-news');
+    // var notiEventText = $('.tablet-news a')
+    // var mainDisplay = $('.main');
+    // var notiEventDisplay = $('.news');
+
+    // notiEventBtn.click(function(){
+    //     mainDisplay.toggle(100);
+    //     notiEventDisplay.toggle(100);
+    //     if (mainDisplay.css('display') == 'none' ){
+    //         notiEventText.text('Temario');
+    //     }else{
+    //         notiEventText.text('Noticias/Eventos');
+
+    //     }
+    // });
 
     var sendBtn = $('.sendBtn');
 

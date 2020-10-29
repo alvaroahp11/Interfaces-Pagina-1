@@ -47,7 +47,7 @@ body {
 }
 
 #menu-icon {
-    display: block;
+    display: none;
     background-color: #ffbb59;
     border: none;
 }
@@ -109,14 +109,35 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
+
 /* Contenido central del Main */
 
 /* iniciar sesion */
 
-/* #iniContainer{
-    padding: 40px;
-    max-height: fit-content;
-} */
+
+
+#inicio{
+    margin: 3%;
+    width: 94%;
+    padding:  10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+    background-color:  #f2f2f2;
+    border: 2px solid #ccc;
+    text-align: center;
+}
+
+#inicio h2{
+    padding: 10px;
+}
+
+#inicio p{
+    padding: 50px;
+}
+
+#iniContainer{
+    display: none;
+}
 
 #iniciarSesion {
    
@@ -176,8 +197,12 @@ body {
 
 
 /* Registrarse */
-#registrarse form {
+#registrarse {
     display: none;
+}
+
+#registrarse form {
+    display: grid;
     grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-areas:". registrarseh registrarseh ."
                         ". nusuario nusuario ."
@@ -691,8 +716,12 @@ body {
 
 
    /* main */
+
     /* menu izquirdo */
-    
+    #tablet-news {
+        display: none;
+    }
+
 
     
 
@@ -730,6 +759,10 @@ body {
     /* menu izquiera */
     #menu {
         display: block;
+    }
+
+    #menuInterno {
+        display: none;
     }
     
     /* news */

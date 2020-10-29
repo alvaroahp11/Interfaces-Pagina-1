@@ -21,8 +21,8 @@
             <nav class="menu-header col-4 col-s-4">
                 <ul>
                     <li class="col-4 col-s-4"><a href="./Index.html">Inico</a></li>
-                    <li class="col-4 col-s-4">Iniciar sesion</li>
-                    <li class="col-4 col-s-4">Comentarios</li>
+                    <li id="menuHIni" class="col-4 col-s-4">Iniciar sesion</li>
+                    <!-- <li class="col-4 col-s-4">Comentarios</li> -->
                 </ul>
             </nav> 
         </div>
@@ -31,21 +31,30 @@
 
             <!-- Menu de la parte izquierda-->
             <div class="col-3 col-s-12" id="menu">
-                <h2> Menu</h2>
-                <ul>
-                    <li><a class="menuleft" href="#">Listado de Estudiantes</a></li>
-                    <li><a class="menuleft" href="#">Foro de la Asignatura</a></li>
-                    <li><a class="menuleft" href="#">Calificaciones</a></li>
-                    <li class="tablet-news"><a  class="menuleft" href="#" >Noticias/Eventos</a></li>
-                </ul>
+                <div id="menuInterno">  
+                    <h2> Menu</h2>
+                    <ul>
+                        <li id="menuLE"><a class="menuleft" href="#">Listado de Estudiantes</a></li>
+                        <li id="menuFA"><a class="menuleft" href="#">Foro de la Asignatura</a></li>
+                        <li id="menuCA"><a class="menuleft" href="#">Calificaciones</a></li>
+                        <li id="tablet-news"><a  class="menuleft" href="#" >Noticias/Eventos</a></li>
+                    </ul>
+                </div>
             </div>
 
 
 
             <!-- Main de la parte del medio-->
             <div class="principal col-6 col-s-8">
+
+                <div id="inicio" class="mid col-12 col-s-12">
+                    <h2>Bienvenido a Aula Global</h2>
+
+                    <p>Gestiona tus materias online!</p>
+
+                </div>
                 
-                <div id="iniContainer">
+                <div id="iniContainer" class="mid col-12 col-s-12">
                     <div id="iniciarSesion" class="col-12 col-s-12">
                         <h2>Inicia Sesión</h2>
 
@@ -61,7 +70,7 @@
                     </div>
                 </div>
 
-                <div id="registrarse" class=" col-12 col-s-12">
+                <div id="registrarse" class="mid col-12 col-s-12">
                     <form autocomplete="on" action="./action_page.php">
                         <h2>Registrarse</h2>
                         <label for="nusuario" id="nusuario">Nombre de Usuario</label>
@@ -127,7 +136,7 @@
                         
                 </div>
 
-                <div id="teoria"class=" col-12 col-s-12">
+                <div id="teoria"class="mid col-12 col-s-12">
                     <div class="temas">
                         <h2 id="titprincipal">Tema 1 - Números naturales</h2>
                         <img class="temaImg" src="./Images/numeros-naturales-1024x683.jpg" alt="Imagen tema 2">
@@ -242,7 +251,7 @@
                     
                 </div>
 
-                <div id="listadoestudiantes" class="show col-12 col-s-12">
+                <div id="listadoestudiantes" class="mid col-12 col-s-12">
                     <h1 class="col-12 col-s-12">Alumnos</h1>
         
                     <div class="alumnos col-12">
@@ -316,7 +325,7 @@
                     </div>
                 </div>
 
-                <div id="foro" class="show col-12 col-s-12">
+                <div id="foro" class="mid col-12 col-s-12">
                     <h2>Foro de la asignatura</h2>
                     <a href="#">
                         <div class="tema col-s-12 col-12">
@@ -353,7 +362,7 @@
 
                 </div>
 
-                <div class="foroalumnos" id="foro1" class="col-12 col-s-12">
+                <div id="foro1" class="mid foroalumnos col-12 col-s-12">
                     <h2>Tema 1 - Números naturales</h2>
                     <div class="mensajealumno">
                         <textarea name="textotema1" id="textotema1" class="mensajealforo"></textarea>
@@ -385,7 +394,7 @@
                     </div>
                 </div>
 
-                <div class="foroalumnos" id="foro2" class="col-12 col-s-12">
+                <div id="foro2" class="mid foroalumnos col-12 col-s-12">
                     <h2>Tema 2 - Números enteros</h2>
                     <div class="mensajealumno">
                         <textarea name="textotema2" id="textotema2" class="mensajealforo"></textarea>
@@ -411,7 +420,7 @@
                     </div>
                 </div>
 
-                <div class="foroalumnos" id="foro3" class="col-12 col-s-12">
+                <div id="foro3" class="mid foroalumnos col-12 col-s-12">
                     <h2>Tema 3 - Números racionales e irracionales</h2>
                     <div class="mensajealumno">
                         <textarea name="textotema3" id="textotema3" class="mensajealforo"></textarea>
@@ -438,10 +447,7 @@
 
                 </div>
 
-
-
-
-                <div class="col-12 col-s-12" id="calificaciones">
+                <div class="mid col-12 col-s-12" id="calificaciones">
                     <h2>Calificaciones</h2>
                     
                     <table class="tabla col-12 col-s-12">
@@ -519,7 +525,7 @@
                 </div>
             
 
-                <div class="main col-12 col-s-12" id="calificaciones">
+                <div class="mid col-12 col-s-12" id="calificaciones">
                     <h2>Calificaciones</h2>
                     
                     <table class="tabla col-12 col-s-12">
@@ -594,7 +600,7 @@
                     
                 </div>
                 
-                <div class="col-12 col-s-12" id="misAsignaturas">
+                <div class="mid col-12 col-s-12" id="misAsignaturas">
                     
                 </div>
             </div>
