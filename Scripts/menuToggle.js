@@ -35,6 +35,37 @@ jQuery('document').ready(function($){
     });
 
 
+    $(function(){
+        $('#publicartema1').click(function(){
+            var textarea = $('#textotema1').val();
+            var template = $($('#agregar1').html());
+            template.find('.texto').html(textarea);
+            var $btext = $('#foro1');
+            $btext.append(template);
+
+        });
+    });
+    $(function(){
+        $('#publicartema2').click(function(){
+            var textarea = $('#textotema2').val();
+            var template = $($('#agregar2').html());
+            template.find('.texto').html(textarea);
+            var $btext = $('#foro2');
+            $btext.append(template);
+
+        });
+    });
+    $(function(){
+        $('#publicartema3').click(function(){
+            var textarea = $('#textotema3').val();
+            var template = $($('#agregar3').html());
+            template.find('.texto').html(textarea);
+            var $btext = $('#foro3');
+            $btext.append(template);
+
+        });
+    });
+
    
     
         

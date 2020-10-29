@@ -543,11 +543,11 @@ body {
     padding: 5px;
 }
 
-#mensajealforo{
+.mensajealforo{
     grid-area: mensajeforo;
 }
 
-#submitfoto{
+.submitforo{
     grid-area: enviarforo;
 }
 
