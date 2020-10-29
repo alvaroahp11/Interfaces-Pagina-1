@@ -120,7 +120,7 @@ body {
 
 #iniciarSesion {
    
-    display: none;
+    display: grid;
     grid-template-columns: 2fr 3fr 3fr 2fr;
     grid-template-areas: ". ttle ttle ."
                         ". lb-email lb-email ."
