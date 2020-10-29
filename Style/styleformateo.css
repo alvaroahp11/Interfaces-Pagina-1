@@ -120,7 +120,7 @@ body {
 
 #iniciarSesion {
    
-    display: none;
+    display: grid;
     grid-template-columns: 2fr 3fr 3fr 2fr;
     grid-template-areas: ". ttle ttle ."
                         ". lb-email lb-email ."
@@ -390,7 +390,7 @@ body {
 
 /* listado de estudiantes */
 #listadoestudiantes {
-    /* display: none; */
+    display: none;
     padding: 10px;
 }
 
@@ -670,9 +670,7 @@ body {
      display: flex;
      align-items: center;
     }
-    #menu-icon   {
-        display: none ;
-    }
+   
 
     .logo {
         text-align: center;
@@ -701,7 +699,9 @@ body {
     
     
     /* news */
-
+    .news {
+        display: block;
+    }
 
     /* footer */
 
@@ -723,6 +723,14 @@ body {
     .col-12 {width: 100%;}
     
     /* Header */
+    #menu-icon   {
+        display: none ;
+    }
+
+    /* menu izquiera */
+    #menu {
+        display: block;
+    }
     
     /* news */
 
