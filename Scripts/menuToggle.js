@@ -59,6 +59,17 @@ footer = function(){
         return user1;
     }
 
+    function getDataFromLogin(data){
+        data = decodeURIComponent(data);
+        var individualdata = data.split('&');
+        for(var i = 0; i<individualdata.length; i++){
+            var index = individualdata[i].indexOf ('=');
+            individualdata[i] = individualdata[i].substring(index+1);
+        }
+
+        return individualdata;
+    }
+
     class user{
 
         constructor(usuario, nia, pass, name, lastname, email, fnacimiento, id, rol, carrera, universidad, idioma){
@@ -167,22 +178,71 @@ jQuery('document').ready(function($){
         e.preventDefault();
         var x = registrarseForm.serialize();
         var user1 = getUserFromSerialize(x);
-        console.log(user1.getPass);
 
-        // var exist = getCookie(user1.email);
-        // if(exist==""){
-        //     setCookie(user1.email, user1, 30);
-        // }
-        // checkCookie(user1.getEmail);
-        setCookie(user1.email, decodeURIComponent(x), 100);
-        console.log(user1);
+        var exist = getCookie(user1.getEmail);
+        console.log(document.cookie);
+        if (exist == ""){
+            setCookie(user1.email, decodeURIComponent(x), 100);
+            
+        }
+        else{
+            window.alert("Usuario ya existente")
+        }
+        document.getElementById("registrarseForm").reset();
+        allMid.hide();
+        inicioPrincipal.show();
+        
+        
+        // console.log(user1.getPass);
 
-        console.log(getUserFromSerialize(getCookie(user1.email)));
+        // // var exist = getCookie(user1.email);
+        // // if(exist==""){
+        // //     setCookie(user1.email, user1, 30);
+        // // }
+        // // checkCookie(user1.getEmail);
+        // setCookie(user1.email, decodeURIComponent(x), 100);
+        // console.log(user1);
 
-
-     
+        // console.log(getUserFromSerialize(getCookie(user1.email)));
+        // console.log(document.cookie)
     });
 
+
+
+    var infoSession = $('#iniciarSesion');
+    infoSession.submit(function(e){
+        e.preventDefault();
+
+        var x = infoSession.serialize();
+
+        //user[0] email user[1] password
+        var user = getDataFromLogin(x);
+        
+        var isUser = getCookie(user[0]);
+        
+        console.log(user[1]);
+        console.log(isUser);
+        if(isUser!=""){
+            var pass = getUserFromSerialize(isUser);
+            console.log(pass.getPass);
+            if(pass.getPass==user[1]){
+                //En caso de que sea profesor mostramos lo que tengamos que mostrar
+                if(pass.getRol=="Administrador"|| pass.getRol=="Profesor"){
+
+                }
+                //En caso contrario es estudiante
+                allMid.hide();
+                getElementById("teoria").show;
+
+            }
+        }
+        //La contraseña es incorrecta o el usuario no existe
+        window.alert("Contraseña incorrecta o el usuario no existe")
+        allMid.hide();
+        inicioPrincipal.show();
+        
+        
+    });  
 
 
     var sendBtn = $('.sendBtn');
