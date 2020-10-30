@@ -41,13 +41,21 @@ footer = function(){
         }
     }
 
-    function getUserFromSerializedArray(alldata){
+    function getUserFromSerialize(alldata){
+        alldata = decodeURIComponent(alldata);
+        var datos = alldata.split('&');
         
-        const user1 = new user(alldata[0].value, alldata[1].value, alldata[2].value, 
-                                alldata[3].value, alldata[4].value, alldata[5].value, 
-                                alldata[6].value, alldata[7].value, alldata[8].value, 
-                                alldata[9].value, alldata[10].value, alldata[11].value
+        for(var i = 0; i < datos.length; i++) {
+            var index = datos[i].indexOf('=');
+            datos[i]= datos[i].substring(index+1);
+        }
+
+        const user1 = new user(datos[0], datos[1], datos[2], 
+                            datos[3], datos[4], datos[5], 
+                            datos[6], datos[7], datos[8], 
+                            datos[9], datos[10], datos[11]
         );
+
         return user1;
     }
 
@@ -68,40 +76,40 @@ footer = function(){
             this.universidad = universidad;
         }
 
-        get usuario (){
+        get getUsuario (){
             return this.usuario;
         }
-        get nia (){
+        get getNia (){
             return this.nia;
         }
-        get pass(){
+        get getPass(){
             return this.pass
         }
-        get name (){
+        get getName (){
             return this.name
         }
-        get lastname (){
+        get getLastname (){
             return this.lastname
         }
-        get email(){
+        get getEmail(){
             return this.email;
         }
-        get fnacimiento(){
+        get getFnacimiento(){
             return this.fnacimiento
         }
-        get id(){
+        get getId(){
             return this.id
         }
-        get rol(){
+        get getRol(){
             return this.rol
         }
-        get carrera(){
+        get getCarrera(){
             return this.carrera
         }
-        get idioma(){
+        get getIdioma(){
             return this.idioma
         }
-        get universidad(){
+        get getUniversidad(){
             return this.universidad 
         }
     }
@@ -157,10 +165,22 @@ jQuery('document').ready(function($){
 
     registrarseForm.submit(function (e) { 
         e.preventDefault();
-        var x = registrarseForm.serializeArray();
-        var user1 = getUserFromSerializedArray(x);
-        console.log(user1.toString());
-      
+        var x = registrarseForm.serialize();
+        var user1 = getUserFromSerialize(x);
+        console.log(user1.getPass);
+
+        // var exist = getCookie(user1.email);
+        // if(exist==""){
+        //     setCookie(user1.email, user1, 30);
+        // }
+        // checkCookie(user1.getEmail);
+        setCookie(user1.email, decodeURIComponent(x), 100);
+        console.log(user1);
+
+        console.log(getUserFromSerialize(getCookie(user1.email)));
+
+
+     
     });
 
 
