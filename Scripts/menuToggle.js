@@ -50,15 +50,12 @@ jQuery('document').ready(function($){
         registrarsePrincipal.show();
     });
 
-    var clearBTn = $('#borrarBtn');
-
-    clearBTn.click(function(){
-        $('#registrarseForm')[0].reset();
-    });
 
     var regSumitBtn = $('#sumitBtn');
 
     regSumitBtn.submit(function(){
+        allMid.hide();
+        iniciarSesionPrincipal.show()
         // var d = new Date();
         // var expires = d.getTime() + (3*24*60*60*1000); 
 

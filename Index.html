@@ -71,31 +71,31 @@
                 </div>
 
                 <div id="registrarse" class="mid col-12 col-s-12">
-                    <form id="registrarseForm" autocomplete="on" action="">
+                    <form id="registrarseForm" autocomplete="on" >
                         <h2>Registrarse</h2>
                         <label for="nusuario" id="nusuario">Nombre de Usuario</label>
-                        <input class="stylereg" id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required >
+                        <input class="stylereg" id="usuario" type="text" name="usuario" pattern="[A-Za-z0-9]+" placeholder="Anonimo123" title="El nombre de usuario debe de estar compuesto por letras y numeros unicamente" required autocomplete>
 
                         <label for="nnia" id="nnia">NIA</label>
-                        <input class="stylereg" id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required >
+                        <input class="stylereg" id="nia" type="text" name="nia" placeholder="100999999" pattern="[1]{1}[0]{2}[0-9]{6}" title="El nia debe de comenzar por 100 seguiro de 6 números" required autocomplete>
 
                         <label for="ncontraseña" id="ncontraseña">Contraseña</label>
                         <input class="stylereg" id="reg-password" type="password" name="contraseña" pattern="[a-z0-9]+" maxlength="8" title="La contraseña debe de estar compuesta de letras minúsculas y números" placeholder="Contraseña" required>
 
                         <label for="nnombre" id="nnombre">Nombre</label>
-                        <input class="stylereg" type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required >
+                        <input class="stylereg" type="text" name="nombre" id="nombre" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Nombre" required autocomplete>
 
                         <label for="napellidos" id="napellidos">Apellidos</label>
-                        <input class="stylereg" type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required >
+                        <input class="stylereg" type="text" name="apellidos" id="apellidos" pattern="[A-Za-z]+" title="Carácter inválido en el nombre" placeholder="Apellido" required autocomplete>
 
                         <label for="nemail" id="nemail">Correo electrónico</label>
-                        <input class="stylereg" type="text" name="email" id="reg-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required >
+                        <input class="stylereg" type="text" name="email" id="reg-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Corre inválido" placeholder="anonimo@anonimo.com" required autocomplete>
 
                         <label for="nfechanacimiento" id="nfechanacimiento">Fecha de Nacimiento</label>
-                        <input class="stylereg" type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required >
+                        <input class="stylereg" type="text" name="fnacimiento" id="fnacimiento" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Fecha inválida" placeholder="DD/MM/AAAA" required autocomplete>
 
                         <label for="nidentificacion" id="nidentificacion">Documento de Identificación</label>
-                        <input class="stylereg" type="text" name="dni" id="dni" required  placeholder="99999999C">
+                        <input class="stylereg" type="text" name="dni" id="dni" required  placeholder="99999999C" autocomplete>
 
                         
                         <label for="nrol" id="nrol">Escoge tu rol</label>
@@ -128,9 +128,9 @@
                         <input id="terminosycondiciones" type="checkbox" name="terminosycondiciones" value="terminosycondiciones" required>
 
 
-                        <input class="stylereg" id="sumitBtn" type="button" value="Guardar">
+                        <input class="stylereg" id="sumitBtn" type="submit" value="Guardar">
                     
-                        <input class="stylereg" id="borrarBtn" type="button" value="Borrar">
+                        <input class="stylereg" id="borrarBtn" type="reset" value="Borrar">
                         
                     </form>
                         
