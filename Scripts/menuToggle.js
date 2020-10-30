@@ -219,27 +219,33 @@ jQuery('document').ready(function($){
         var user = getDataFromLogin(x);
         
         var isUser = getCookie(user[0]);
-        
-        console.log(user[1]);
-        console.log(isUser);
+
         if(isUser!=""){
             var pass = getUserFromSerialize(isUser);
-            console.log(pass.getPass);
+           
             if(pass.getPass==user[1]){
                 //En caso de que sea profesor mostramos lo que tengamos que mostrar
                 if(pass.getRol=="Administrador"|| pass.getRol=="Profesor"){
 
+                    console.log(pass.getRol);
                 }
                 //En caso contrario es estudiante
-                allMid.hide();
-                getElementById("teoria").show;
+                else{
+                    console.log(pass.getRol);
+                    allMid.hide();
+                    getElementById("teoria").show;
 
+
+                }
             }
+        }else{
+
+            //La contraseña es incorrecta o el usuario no existe
+            window.alert("Contraseña incorrecta o el usuario no existe")
+            allMid.hide();
+            inicioPrincipal.show();
         }
-        //La contraseña es incorrecta o el usuario no existe
-        window.alert("Contraseña incorrecta o el usuario no existe")
-        allMid.hide();
-        inicioPrincipal.show();
+       
         
         
     });  
