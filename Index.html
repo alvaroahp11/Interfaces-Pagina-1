@@ -99,14 +99,16 @@
 
                         
                         <label for="nrol" id="nrol">Escoge tu rol</label>
-                        <select class="stylereg" name="rol" id="rol">
+                        <select class="stylereg" name="rol" id="rol" required>
+                            <option value=""disabled selected value style='display: none'>Escoge una opción</option>
                             <option value="Administrador">Administrador</option>
                             <option value="Profesor">Profesor</option>
                             <option value="Estudiante">Estudiante</option>
                         </select>
 
                         <label id="ncarrera" for="ncarrera">Escoge tu carrera</label>
-                        <select class="stylereg" name="carrera" id="carrera">
+                        <select class="stylereg" name="carrera" id="carrera" required>
+                            <option value=""disabled selected value style='display: none'>Escoge una opción</option>
                             <option value="informática">Grado en ingeniería informática</option>
                             <option value="derecho">Grado en derecho</option>
                             <option value="industrial">Grado en ingeniería industrial</option>
@@ -116,7 +118,10 @@
                         <input class="stylereg" type="text" id="universidad" name="universidad" value="Universidad Carlos III de Madrid" readonly>
 
                         <label id="nidioma" for="nidioma">Escoge tu idioma</label>
+                        
                         <select class="stylereg" id="idioma" name="idioma">
+                            <option value="nada" disabled selected value style='display: none'>Escoge una opción</option>
+                            
                             <option value="ingles">English</option>
                             <option value="español">Español</option>
                             <option value="italiano">Italiano</option>
