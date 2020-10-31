@@ -9,7 +9,7 @@ footer = function(){
         var d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         var expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + "; SameSite=Lax; secure";       
+        document.cookie = cname + "=" + cvalue + ";" + expires + "; SameSite=Lax";       
     }
 
     //get cookie
@@ -28,18 +28,6 @@ footer = function(){
         return "";
     }
     
-    //check
-    function checkCookie(cname) {
-        var user = getCookie(cname);
-        if (user != "") {
-          alert("Welcome again " + user);
-        } else {
-          user = prompt("Please enter your name:", "");
-          if (user != "" && user != null) {
-            setCookie("username", user, 365);
-          }
-        }
-    }
 
     function getUserFromSerialize(alldata){
         alldata = decodeURIComponent(alldata);
@@ -125,6 +113,7 @@ footer = function(){
         }
     }
 
+var logedUser;
 
 jQuery('document').ready(function($){
     var allMid = $('.mid')
@@ -182,15 +171,16 @@ jQuery('document').ready(function($){
         var exist = getCookie(user1.getEmail);
         console.log(document.cookie);
         if (exist == ""){
-            setCookie(user1.email, decodeURIComponent(x), 100);
-            
+            setCookie(user1.email, decodeURIComponent(x), 10);
+            console.log(document.cookie);
+            allMid.hide();
+            inicioPrincipal.show();
         }
         else{
             window.alert("Usuario ya existente")
+            document.getElementById("registrarseForm").reset();
         }
-        document.getElementById("registrarseForm").reset();
-        allMid.hide();
-        inicioPrincipal.show();
+        
         
         
         // console.log(user1.getPass);
@@ -224,18 +214,14 @@ jQuery('document').ready(function($){
             var pass = getUserFromSerialize(isUser);
            
             if(pass.getPass==user[1]){
+                logedUser = user;
                 //En caso de que sea profesor mostramos lo que tengamos que mostrar
                 if(pass.getRol=="Administrador"|| pass.getRol=="Profesor"){
-
-                    console.log(pass.getRol);
                 }
                 //En caso contrario es estudiante
                 else{
-                    console.log(pass.getRol);
                     allMid.hide();
                     getElementById("teoria").show;
-
-
                 }
             }
         }else{
