@@ -113,7 +113,7 @@ footer = function(){
         }
     }
 
-var logedUser;
+const logedUser = new user();
 
 jQuery('document').ready(function($){
     var allMid = $('.mid')
@@ -178,7 +178,7 @@ jQuery('document').ready(function($){
         }
         else{
             window.alert("Usuario ya existente")
-            document.getElementById("registrarseForm").reset();
+            registrarseForm[0].reset();
         }
         
         
@@ -213,27 +213,19 @@ jQuery('document').ready(function($){
         if(isUser!=""){
             var pass = getUserFromSerialize(isUser);
            
+            console.log(logedUser.getEmail);
             if(pass.getPass==user[1]){
                 logedUser = user;
-                //En caso de que sea profesor mostramos lo que tengamos que mostrar
-                if(pass.getRol=="Administrador"|| pass.getRol=="Profesor"){
-                }
-                //En caso contrario es estudiante
-                else{
-                    allMid.hide();
-                    getElementById("teoria").show;
-                }
+                console.log(logedUser.getEmail);
+            }else{
+                window.alert("Contraseña incorrecta o el usuario no existe");
+                infoSession[0].reset();
             }
         }else{
-
             //La contraseña es incorrecta o el usuario no existe
-            window.alert("Contraseña incorrecta o el usuario no existe")
-            allMid.hide();
-            inicioPrincipal.show();
+            window.alert("Contraseña incorrecta o el usuario no existe");
+            infoSession[0].reset();
         }
-       
-        
-        
     });  
 
 
@@ -277,7 +269,12 @@ jQuery('document').ready(function($){
    
     
         
-   
+    if (logedUser.getEmail =! ''){
+        menuHRegBtn.hide();
+        menuHIniBtn.hide();
+        allMid.hide();
+        inicioPrincipal.show();
+    }
 
 
 
