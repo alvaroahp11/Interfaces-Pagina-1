@@ -135,7 +135,7 @@ footer = function(){
         menuInterno.show();
         newsInterno.show();
         nusuario.show();
-        $('#foro1').show();
+
 
        //console.log(logedUser.getEmail);  
         
@@ -310,6 +310,55 @@ jQuery('document').ready(function($){
         allMid.hide();
         $("#userCalifications").show();
     }
+
+    document.getElementById("clickableForum1").onclick = function(){
+        allMid.hide();
+        $('#foro1').show();
+    }
+    
+    document.getElementById("clickableForum2").onclick = function(){
+        allMid.hide();
+        $('#foro2').show();
+    }
+
+    document.getElementById("clickableForum3").onclick = function(){
+        allMid.hide();
+        $('#foro3').show();
+    }
+
+    document.getElementById("downloadBtn").onclick = function(){
+        var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+        var textRange; var j=0;
+        tab = document.getElementById('grades'); 
+    
+        for(j = 0 ; j < tab.rows.length ; j++) 
+        {     
+            tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+            //tab_text=tab_text+"</tr>";
+        }
+    
+        tab_text=tab_text+"</table>";
+        tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+        tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+        tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+    
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE "); 
+    
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+        {
+            txtArea1.document.open("txt/html","replace");
+            txtArea1.document.write(tab_text);
+            txtArea1.document.close();
+            txtArea1.focus(); 
+            sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+        }  
+        else                 //other browser not tested on IE 11
+            sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+    
+        return (sa);
+    }
+
     
     var sendBtn = $('.sendBtn');
 
@@ -333,6 +382,8 @@ jQuery('document').ready(function($){
             var $btext = $('#foro1');
             $btext.append(template);
 
+            $('#textotema1').val('');
+
         });
     });
 
@@ -354,10 +405,13 @@ jQuery('document').ready(function($){
             var $btext = $('#foro2');
             $btext.append(template);
 
+            $('#textotema2').val('');
+
         });
     });
     $(function(){
         $('#publicartema3').click(function(){
+            var textarea = $('#textotema3').val();
             var today = new Date();
             var dd = String(today.getDate()).padStart(2, '0');
             var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -367,13 +421,15 @@ jQuery('document').ready(function($){
 
             var userName = logedUser.getName+" "+logedUser.getLastname;
 
-            var textarea = $('#textotema3').val();
+            
             var template = $($('#agregar3').html());
             template.children('.fechayhora').text(today);
             template.children('.informacionAlumn').text(userName);
             template.find('.texto').html(textarea);
             var $btext = $('#foro3');
             $btext.append(template);
+
+            $('#textotema3').val('');
 
         });
     });

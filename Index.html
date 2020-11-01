@@ -344,7 +344,7 @@
                 <div id="foro" class="mid col-12 col-s-12">
                     <h2>Foro de la asignatura</h2>
                     <a href="#">
-                        <div class="tema col-s-12 col-12">
+                        <div id="clickableForum1" class="tema col-s-12 col-12">
                             <h4 class="titulo-tema col-7 col-s-7">Tema 3 - Números racionales e irracionales</h4>
                             <div class="cant-msg-icon col-2 col-s-2">
                                 <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
@@ -355,7 +355,7 @@
                     </a>   
 
                     <a href="#">
-                        <div class="tema col-s-12 col-12">
+                        <div id="clickableForum2" class="tema col-s-12 col-12">
                             <h4 class="titulo-tema col-7 col-s-7">Tema 2 - Números enteros</h4>
                             <div class="cant-msg-icon col-2 col-s-2">
                                 <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
@@ -366,7 +366,7 @@
                     </a>
                     
                     <a href="#">
-                        <div class="tema col-s-12 col-12">
+                        <div id="clickableForum3" class="tema col-s-12 col-12">
                             <h4 class="titulo-tema col-7 col-s-7">Tema 1 - Números naturales</h4>
                             <div class="cant-msg-icon col-2 col-s-2">
                                 <img src="./Images/chat.png" alt="icono cantidad de mensajes de cada temario">
@@ -466,7 +466,7 @@
                 <div class="mid col-12 col-s-12" id="calificaciones">
                     <h2>Calificaciones</h2>
                     
-                    <table class="tabla col-12 col-s-12">
+                    <table id="grades" class="tabla col-12 col-s-12">
                         <tr class="cabecera">
                             <th>Alumnos</th>
                             <th>Actividad 1</th>
@@ -534,14 +534,15 @@
                             <th>2,98</th>
                         </tr>
                     </table>
-
-                    <button id="downloadBtn"></button>
-                
+                    
+                    <iframe id="txtArea1" style="display:none"></iframe>
+                    <button id="downloadBtn" id="btnxport" onclick="fnExcelReport()">Download Grades</button>
+                    
                     
                 </div>
             
 
-                <div class="mid col-12 col-s-12" id="calificaciones">
+                <!-- <div class="mid col-12 col-s-12" id="calificaciones">
                     <h2>Calificaciones</h2>
                     
                     <table class="tabla col-12 col-s-12">
@@ -617,7 +618,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
                 
                 <div class="mid col-12 col-s-12" id="misAsignaturas">
                     
