@@ -58,7 +58,7 @@ footer = function(){
         return individualdata;
     }
 
-    function iniSesion (){
+    function iniSesion (logedUser){
         var allMid = $('.mid');
         var menuHRegBtn = $('#menuHReg');
         var menuHIniBtn = $('#menuHIni');
@@ -218,7 +218,7 @@ jQuery('document').ready(function($){
            
             if(pass.getPass==user[1]){
                 logedUser = pass;
-                iniSesion();
+                iniSesion(logedUser);
             }else{
                 window.alert("Contraseña incorrecta o el usuario no existe");
                 infoSession[0].reset();
