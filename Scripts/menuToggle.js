@@ -38,7 +38,7 @@ footer = function(){
             datos[i]= datos[i].substring(index+1);
         }
 
-        const user1 = new user(datos[0], datos[1], datos[2], 
+        var user1 = new user(datos[0], datos[1], datos[2], 
                             datos[3], datos[4], datos[5], 
                             datos[6], datos[7], datos[8], 
                             datos[9], datos[10], datos[11]
@@ -56,6 +56,25 @@ footer = function(){
         }
 
         return individualdata;
+    }
+
+    function iniSesion (){
+        var allMid = $('.mid');
+        var menuHRegBtn = $('#menuHReg');
+        var menuHIniBtn = $('#menuHIni');
+        var menuHCerrarBtn = $('#menuHCerrar');
+        var inicioPrincipal = $('#inicio');
+        var menuInterno = $('#menuInterno');
+        var newsInterno = $('#newsIn');
+
+        allMid.hide();
+        menuHRegBtn.hide();
+        menuHIniBtn.hide();
+        menuHCerrarBtn.show();
+        inicioPrincipal.show();
+        menuInterno.show();
+        newsInterno.show();
+
     }
 
     class user{
@@ -113,10 +132,11 @@ footer = function(){
         }
     }
 
-const logedUser = new user();
 
 jQuery('document').ready(function($){
     var allMid = $('.mid')
+    var logedUser = new user('', '', '', '', '', '', '', '', '', '', '', '',);
+
 
     footer();
     $( window ).resize(function() {
@@ -169,10 +189,8 @@ jQuery('document').ready(function($){
         var user1 = getUserFromSerialize(x);
 
         var exist = getCookie(user1.getEmail);
-        console.log(document.cookie);
         if (exist == ""){
             setCookie(user1.email, decodeURIComponent(x), 10);
-            console.log(document.cookie);
             allMid.hide();
             inicioPrincipal.show();
         }
@@ -180,21 +198,6 @@ jQuery('document').ready(function($){
             window.alert("Usuario ya existente")
             registrarseForm[0].reset();
         }
-        
-        
-        
-        // console.log(user1.getPass);
-
-        // // var exist = getCookie(user1.email);
-        // // if(exist==""){
-        // //     setCookie(user1.email, user1, 30);
-        // // }
-        // // checkCookie(user1.getEmail);
-        // setCookie(user1.email, decodeURIComponent(x), 100);
-        // console.log(user1);
-
-        // console.log(getUserFromSerialize(getCookie(user1.email)));
-        // console.log(document.cookie)
     });
 
 
@@ -213,10 +216,9 @@ jQuery('document').ready(function($){
         if(isUser!=""){
             var pass = getUserFromSerialize(isUser);
            
-            console.log(logedUser.getEmail);
             if(pass.getPass==user[1]){
-                logedUser = user;
-                console.log(logedUser.getEmail);
+                logedUser = pass;
+                iniSesion();
             }else{
                 window.alert("Contraseña incorrecta o el usuario no existe");
                 infoSession[0].reset();
@@ -269,12 +271,7 @@ jQuery('document').ready(function($){
    
     
         
-    if (logedUser.getEmail =! ''){
-        menuHRegBtn.hide();
-        menuHIniBtn.hide();
-        allMid.hide();
-        inicioPrincipal.show();
-    }
+
 
 
 
