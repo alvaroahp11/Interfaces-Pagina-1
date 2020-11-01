@@ -52,6 +52,10 @@ body {
     border: none;
 }
 
+#menu-icon:hover{
+    cursor: pointer;
+}
+
 #menu-icon::after{
     border: none;
 }
@@ -91,6 +95,22 @@ body {
 #menuHCerrar {
     display: none;
 }
+
+#nusuario {
+    display: none;
+    
+}
+
+#nusuario span{
+    float: left;
+}
+
+#nusuario img {
+    float: left;
+    height: 20px;
+}
+
+
 
 /* main */
 
@@ -731,10 +751,17 @@ body {
        
     }
 
+    #menu-icon{
+        display: block;
+    }
+
+    
+
 
    /* main */
 
     /* menu izquirdo */
+
     #tablet-news {
         display: none;
     }

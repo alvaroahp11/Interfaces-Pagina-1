@@ -1,4 +1,60 @@
+class user{
+
+    constructor(usuario, nia, pass, name, lastname, email, fnacimiento, id, rol, carrera, universidad, idioma){
+        this.usuarios=usuario;
+        this.nia = nia;
+        this.pass = pass;
+        this.name= name;
+        this.lastname = lastname;
+        this.email= email;
+        this.fnacimiento = fnacimiento;
+        this.id = id;
+        this.rol = rol;
+        this.carrera = carrera;
+        this.idioma = idioma;
+        this.universidad = universidad;
+    }
+
+    get getUsuario(){
+        return this.usuario;
+    }
+    get getNia(){
+        return this.nia;
+    }
+    get getPass(){
+        return this.pass;
+    }
+    get getName(){
+        return this.name;
+    }
+    get getLastname(){
+        return this.lastname;
+    }
+    get getEmail(){
+        return this.email;
+    }
+    get getFnacimiento(){
+        return this.fnacimiento;
+    }
+    get getId(){
+        return this.id;
+    }
+    get getRol(){
+        return this.rol;
+    }
+    get getCarrera(){
+        return this.carrera;
+    }
+    get getIdioma(){
+        return this.idioma;
+    }
+    get getUniversidad(){
+        return this.universidad; 
+    }
+}
+
 //fixed footer at the bottom
+
 footer = function(){ 
     alto_main= $(window).height() - $('.footer').height() - $('.header').height();
     $('#main').css('min-height',alto_main + 'px') ; 
@@ -59,6 +115,7 @@ footer = function(){
     }
 
     function iniSesion (logedUser){
+        var logedUserCopy = logedUser;
         var allMid = $('.mid');
         var menuHRegBtn = $('#menuHReg');
         var menuHIniBtn = $('#menuHIni');
@@ -66,6 +123,9 @@ footer = function(){
         var inicioPrincipal = $('#inicio');
         var menuInterno = $('#menuInterno');
         var newsInterno = $('#newsIn');
+        var nusuario = $('#nusuario');
+        var nusuarioSpan = $('#nusuario span');
+        var menIcon = $('#menu-icon');
 
         allMid.hide();
         menuHRegBtn.hide();
@@ -74,63 +134,25 @@ footer = function(){
         inicioPrincipal.show();
         menuInterno.show();
         newsInterno.show();
+        nusuario.show();
+
+       //console.log(logedUser.getEmail);  
+        
+        nusuarioSpan.text(logedUser.getName + " " + logedUser.getLastname);
+
+        //if(window.innerWidth < 768)
+
+        
+
+        // if (logedUser.getRol() == 'Administrador'|| logedUser.getRol() == 'Profesor'){
+            
+        // } else{
+
+        // }
 
     }
 
-    class user{
-
-        constructor(usuario, nia, pass, name, lastname, email, fnacimiento, id, rol, carrera, universidad, idioma){
-            this.usuarios=usuario;
-            this.nia = nia;
-            this.pass = pass;
-            this.name= name;
-            this.lastname = lastname;
-            this.email= email;
-            this.fnacimiento = fnacimiento;
-            this.id = id;
-            this.rol = rol;
-            this.carrera = carrera;
-            this.idioma = idioma;
-            this.universidad = universidad;
-        }
-
-        get getUsuario (){
-            return this.usuario;
-        }
-        get getNia (){
-            return this.nia;
-        }
-        get getPass(){
-            return this.pass
-        }
-        get getName (){
-            return this.name
-        }
-        get getLastname (){
-            return this.lastname
-        }
-        get getEmail(){
-            return this.email;
-        }
-        get getFnacimiento(){
-            return this.fnacimiento
-        }
-        get getId(){
-            return this.id
-        }
-        get getRol(){
-            return this.rol
-        }
-        get getCarrera(){
-            return this.carrera
-        }
-        get getIdioma(){
-            return this.idioma
-        }
-        get getUniversidad(){
-            return this.universidad 
-        }
-    }
+    
 
 
 jQuery('document').ready(function($){
@@ -217,6 +239,7 @@ jQuery('document').ready(function($){
             var pass = getUserFromSerialize(isUser);
            
             if(pass.getPass==user[1]){
+                
                 logedUser = pass;
                 iniSesion(logedUser);
             }else{
