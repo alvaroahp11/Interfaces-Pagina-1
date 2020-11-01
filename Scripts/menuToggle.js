@@ -125,7 +125,7 @@ footer = function(){
         var newsInterno = $('#newsIn');
         var nusuario = $('#nusuario');
         var nusuarioSpan = $('#nusuario span');
-        var menIcon = $('#menu-icon');
+        var menuIcon = $('#menu-icon');
 
         allMid.hide();
         menuHRegBtn.hide();
@@ -135,24 +135,32 @@ footer = function(){
         menuInterno.show();
         newsInterno.show();
         nusuario.show();
+        $('#foro1').show();
 
        //console.log(logedUser.getEmail);  
         
         nusuarioSpan.text(logedUser.getName + " " + logedUser.getLastname);
 
-        //if(window.innerWidth < 768)
+        if($(window).width() < 768){
+            menuIcon.show();
+        }
 
         
 
-        // if (logedUser.getRol() == 'Administrador'|| logedUser.getRol() == 'Profesor'){
-            
-        // } else{
+        if (logedUser.getRol == 'Administrador'|| logedUser.getRol == 'Profesor'){
+            console.log("hola");
+            $('#asignaturasAlumno').hide();
+            $('#menuLE').show();
 
-        // }
+
+        }else{
+            $('#asignaturasAlumno').show();
+            $('#menuLE').hide();
+        }
 
     }
 
-    
+
 
 
 jQuery('document').ready(function($){
@@ -229,6 +237,7 @@ jQuery('document').ready(function($){
         e.preventDefault();
 
         var x = infoSession.serialize();
+        //asdf
 
         //user[0] email user[1] password
         var user = getDataFromLogin(x);
@@ -254,22 +263,93 @@ jQuery('document').ready(function($){
     });  
 
 
+    //Cerrar Sesión Acciones
+    document.getElementById("menuHCerrar").onclick = function(){
+        if(confirm("Deseas cerrar sesión?")){
+            $('#menuInterno').hide();
+            $('#menuHCerrar').hide();
+            $('#nusuario').hide();
+            $('#newsIn').hide();
+            allMid.hide()
+            menuBtn.hide();
+            inicioPrincipal.show();
+            $('#menuHIni').show();
+            $('#menuHReg').show();
+            
+            
+        }
+    }
+    //Lo necesario para irme al inicio
+    document.getElementById("subjectMath").onclick = function(){
+        allMid.hide();
+        $("#teoria").show();
+        
+    }
+    //Lo necesario para mostrar el listado de estudiantes (rol de admin o prof)
+    document.getElementById("menuLE").onclick =function(){
+        allMid.hide();
+        $("#listadoestudiantes").show();
+    }
+    //Lo necesario para mostrar Foro de la asignatura
+    document.getElementById("menuFA").onclick = function(){
+        allMid.hide();
+        $("#foro").show();
+    }
+    //Lo necesario para mostrar Calificacion
+    document.getElementById("menuCA").onclick = function(){
+        allMid.hide();
+        $("#calificaciones").show();
+    }
+    //Las noticias SOLO TABLET Y TELEFONOS
+    document.getElementById("tablet-news").onclick = function(){
+        allMid.hide();
+        $("#newsIn").show();
+    }
+    //Asignaturas(ROL) Estudiante
+    document.getElementById("asignaturasAlumno").onclick = function(){
+        allMid.hide();
+        $("#userCalifications").show();
+    }
+    
     var sendBtn = $('.sendBtn');
 
     $(function(){
         $('#publicartema1').click(function(){
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = dd + '/' + mm + '/' + yyyy;
+
+            var userName = logedUser.getName+" "+logedUser.getLastname;
+
             var textarea = $('#textotema1').val();
             var template = $($('#agregar1').html());
+
+            template.children('.fechayhora').text(today);
+            template.children('.informacionAlumn').text(userName);
             template.find('.texto').html(textarea);
             var $btext = $('#foro1');
             $btext.append(template);
 
         });
     });
+
     $(function(){
         $('#publicartema2').click(function(){
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+            today = dd + '/' + mm + '/' + yyyy;
+            
+            var userName = logedUser.getName+" "+logedUser.getLastname;
+
             var textarea = $('#textotema2').val();
             var template = $($('#agregar2').html());
+            template.children('.fechayhora').text(today);
+            template.children('.informacionAlumn').text(userName);
             template.find('.texto').html(textarea);
             var $btext = $('#foro2');
             $btext.append(template);
@@ -278,8 +358,19 @@ jQuery('document').ready(function($){
     });
     $(function(){
         $('#publicartema3').click(function(){
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            var yyyy = today.getFullYear();
+
+            today = dd + '/' + mm + '/' + yyyy;
+
+            var userName = logedUser.getName+" "+logedUser.getLastname;
+
             var textarea = $('#textotema3').val();
             var template = $($('#agregar3').html());
+            template.children('.fechayhora').text(today);
+            template.children('.informacionAlumn').text(userName);
             template.find('.texto').html(textarea);
             var $btext = $('#foro3');
             $btext.append(template);

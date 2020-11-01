@@ -103,11 +103,13 @@ body {
 
 #nusuario span{
     float: left;
+    padding: 5px;
 }
 
 #nusuario img {
     float: left;
-    height: 20px;
+    height: 25px;
+    padding: 5px 0 5px 5px;
 }
 
 
@@ -226,6 +228,9 @@ body {
     grid-area: bt-reg;
 }
 
+#closeSesion{
+    text-decoration: none;
+}
 
 
 
@@ -522,6 +527,10 @@ body {
     padding: 20px;
 }
 
+#foro1{
+    display: inherit;
+}
+
 #foro h2 {
     text-align: center;
     padding-bottom: 10px;
@@ -751,9 +760,11 @@ body {
        
     }
 
-    #menu-icon{
-        display: block;
+    #nusuario img {
+        height: 30px
     }
+
+
 
     
 
@@ -802,6 +813,10 @@ body {
     /* Header */
     #menu-icon   {
         display: none ;
+    }
+
+    #nusuario img {
+        height: 35px
     }
 
     /* menu izquiera */
