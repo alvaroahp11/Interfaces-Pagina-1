@@ -322,17 +322,24 @@ jQuery('document').ready(function($){
     //Lo necesario para mostrar Calificacion
     document.getElementById("menuCA").onclick = function(){
         allMid.hide();
-        $("#calificaciones").show();
+
+        if(logedUser.getRol=="Estudiante"){
+            $("#calificacionesAlumn").show();
+        }else{
+            $("#calificacionesProf").show();
+        }
+
     }
     //Las noticias SOLO TABLET Y TELEFONOS
     document.getElementById("tablet-news").onclick = function(){
         allMid.hide();
-        $("#newsIn").show();
+        $(".news").show();
+        
     }
     //Asignaturas(ROL) Estudiante
     document.getElementById("asignaturasAlumno").onclick = function(){
         allMid.hide();
-        $("#userCalifications").show();
+        $("#misAsignaturas").show();
     }
 
     document.getElementById("clickableForum1").onclick = function(){
@@ -352,11 +359,44 @@ jQuery('document').ready(function($){
 
 
     
-    //Excel
+    //Excel para el profesor
     document.getElementById("downloadBtn").onclick = function(){
         var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
         var textRange; var j=0;
         tab = document.getElementById('grades'); 
+    
+        for(j = 0 ; j < tab.rows.length ; j++) 
+        {     
+            tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+            
+        }
+    
+        tab_text=tab_text+"</table>";
+        tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");
+        tab_text= tab_text.replace(/<img[^>]*>/gi,""); 
+        tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); 
+    
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE "); 
+    
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))     
+        {
+            txtArea1.document.open("txt/html","replace");
+            txtArea1.document.write(tab_text);
+            txtArea1.document.close();
+            txtArea1.focus(); 
+            sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+        }  
+        else                
+            sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+    
+        return (sa);
+    }
+    //Excel para el alumno
+    document.getElementById("downloadBtnStudent").onclick = function(){
+        var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+        var textRange; var j=0;
+        tab = document.getElementById('gradesStudent'); 
     
         for(j = 0 ; j < tab.rows.length ; j++) 
         {     

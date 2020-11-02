@@ -464,7 +464,7 @@
 
                 </div>
 
-                <div class="mid col-12 col-s-12" id="calificaciones">
+                <div class="mid col-12 col-s-12 calificaciones" id="calificacionesProf">
                     <h2>Calificaciones</h2>
                     
                     <table id="grades" class="tabla col-12 col-s-12">
@@ -537,91 +537,85 @@
                     </table>
                     
                     <iframe id="txtArea1" style="display:none"></iframe>
-                    <button id="downloadBtn" id="btnxport" onclick="fnExcelReport()">Download Grades</button>
+                    <button id="downloadBtn" class="downloadButton" onclick="fnExcelReport()">Download Grades</button>
                     
                     
                 </div>
             
 
-                <!-- <div class="mid col-12 col-s-12" id="calificaciones">
+                <div class="mid col-12 col-s-12 calificaciones" id="calificacionesAlumn">
                     <h2>Calificaciones</h2>
-                    
-                    <table class="tabla col-12 col-s-12">
+                    <table id="gradesStudent" class="tabla col-12 col-s-12">
                         <tr class="cabecera">
-                            <th>Alumnos</th>
+                            <th>Materia</th>
                             <th>Actividad 1</th>
                             <th>Actividad 2</th>
                             <th>Actividad 3</th>
                         </tr>
                         <tr>
-                            <th>Andres Eduardo Jaime Perez</th>
+                            <th>Cálculo</th>
                             <th>1,17</th>
                             <th>5,18</th>
                             <th>9,54</th>
                         </tr>
                         <tr>
-                            <th>Gerardo Henriquez Fernandez</th>
+                            <th>Física</th>
                             <th>9,75</th>
                             <th>5,76</th>
                             <th>7,87</th>
                         </tr>
                         <tr>
-                            <th>Andres Eduardo Tamayo Azpurua</th>
+                            <th>Programación</th>
                             <th>3,75</th>
                             <th>10,00</th>
                             <th>2,10</th>
                         </tr>
                         <tr>
-                            <th>Abril Capra</th>
+                            <th>Álgebra</th>
                             <th>8,54</th>
                             <th>6,09</th>
                             <th>2,98</th>
                         </tr>
                         <tr>
-                            <th>Ana Alvarez</th>
+                            <th>Técnicas de expresión oral y escrita</th>
                             <th>10,00</th>
                             <th>4,98</th>
                             <th>5,00</th>
                         </tr>
                         <tr>
-                            <th>Felix Lan</th>
+                            <th>Técnicas de búsqueda y uso de la información</th>
                             <th>9,75</th>
                             <th>9,76</th>
                             <th>8,87</th>
                         </tr>
-                        <tr>
-                            <th>Cristina Herrero</th>
-                            <th>6,06</th>
-                            <th>3,98</th>
-                            <th>8,68</th>
-                        </tr>
-                        <tr>
-                            <th>Orianna Maita</th>
-                            <th>4,50</th>
-                            <th>4,87</th>
-                            <th>7,23</th>
-                        </tr>
-                        <tr>
-                            <th>Gabriela Delfino</th>
-                            <th>10,00</th>
-                            <th>10,00</th>
-                            <th>9,81</th>
-                        </tr>
-                        <tr>
-                            <th>Javier Aponte</th>
-                            <th>2,65</th>
-                            <th>8,74</th>
-                            <th>2,98</th>
-                        </tr>
                     </table>
-                
-                    <div class="mid col-12 col-s-12" id="userCalifications">
 
-                    </div>
+                    <iframe id="txtArea1" style="display:none"></iframe>
+                    <button id="downloadBtnStudent" class="downloadButton" onclick="fnExcelReport()">Download Grades</button>
 
-                </div> -->
+                </div>
                 
                 <div class="mid col-12 col-s-12" id="misAsignaturas">
+
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Cálculo</h4>
+                    </div>
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Física</h4>
+                    </div>
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Programación</h4>
+                    </div>
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Álgebra</h4>
+                    </div>
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Técnicas de expresión oral y escrita</h4>
+                    </div>
+
+                    <div class="asignatura col-12 col-s-12">
+                        <h4 class="titlesubject col-12">Técnicas de búsqueda y uso de la información</h4>
+                    </div>
                     
                 </div>
             </div>

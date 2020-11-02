@@ -631,12 +631,14 @@ body {
 
 /* calificaciones */
 
-#calificaciones {
+.calificaciones {
+
     display: none;
     padding: 20px;
+
 }
 
-#calificaciones h2 {
+.calificaciones h2 {
     text-align: center;
     padding: 10px;
 }
@@ -657,6 +659,46 @@ body {
 .cabecera th{
     padding: 10px 0;
 }
+
+.downloadButton{
+    padding:  15px;
+    width: 94%;
+    margin: 3%; 
+    column-gap: 1em;
+
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+    background-color:  white;
+    border: 2px solid #ccc;
+}
+
+.downloadButton:hover{
+    cursor: pointer;
+}
+
+/* Mis asignaturas */
+
+#misAsignaturas{
+    display: none;
+    padding: 40px;
+}
+
+.asignatura{
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.asignatura h4{
+    text-align: center;
+}
+
+
+
+
 
 /* news */
 
