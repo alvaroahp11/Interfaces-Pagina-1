@@ -621,6 +621,7 @@ body {
 
 .mensajealforo{
     grid-area: mensajeforo;
+    resize: vertical;
 }
 
 .submitforo{
