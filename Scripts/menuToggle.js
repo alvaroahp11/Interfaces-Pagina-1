@@ -179,10 +179,22 @@ jQuery('document').ready(function($){
         disableEmptyDetails: false, // disable showing empty date details
         events: [
             {
-                startDate: new Date(new Date().setHours(new Date().getHours() + 24)).toDateString(),
-                endDate: new Date(new Date().setHours(new Date().getHours() + 25)).toISOString(),
-                summary: 'Visit of the Eiffel Tower'
-            }
+                startDate: new Date(new Date().setHours(new Date().getHours() + 48)).toDateString(),
+                endDate: new Date(new Date().setHours(new Date().getHours() + 49)).toISOString(),
+                summary: 'Clase de Recuperación'
+              },
+              // generate new event for yesterday at noon
+              {
+                startDate: new Date(new Date().setHours(new Date().getHours() - new Date().getHours() + 144, 0)).toISOString(),
+                endDate: new Date(new Date().setHours(new Date().getHours() - new Date().getHours() + 145)).getTime(),
+                summary: 'Examen parcial 2'
+              },
+              // generate new event for the last two days
+              {
+                startDate: new Date(new Date().setHours(new Date().getHours() + 288)).toISOString(),
+                endDate: new Date(new Date().setHours(new Date().getHours() + 289)).getTime(),
+                summary: 'Presentación trabajo final'
+              }
         ],                     // List of events
         onInit: function (calendar) {}, // Callback after first initialization
         onMonthChange: function (month, year) {}, // Callback on month change
@@ -426,8 +438,6 @@ jQuery('document').ready(function($){
         return (sa);
     }
 
-    
-    var sendBtn = $('.sendBtn');
 
     $(function(){
         $('#publicartema1').click(function(){
@@ -500,6 +510,8 @@ jQuery('document').ready(function($){
 
         });
     });
+
+    var sendBtn = $('.sendBtn');
 
     sendBtn.click(function(){ 
         var mailtext = $(this).parent().children('.correoAl').text();

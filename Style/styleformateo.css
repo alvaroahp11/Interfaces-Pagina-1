@@ -247,7 +247,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr 4fr 1fr;
     grid-template-areas:". registrarseh registrarseh ."
-                        ". nusuario nusuario ."
+                        ". nusuarioForm nusuarioForm ."
                         ". usuario usuario ."
                         ". nnia nnia ."
                         ". nia nia ."
@@ -284,8 +284,8 @@ body {
     text-align: center;
 }
 
-#nusuario{
-    grid-area: nusuario ;
+#nusuarioForm{
+    grid-area: nusuarioForm ;
 }
 
 #usuario{
@@ -621,11 +621,13 @@ body {
 
 .mensajealforo{
     grid-area: mensajeforo;
+    resize: vertical;
 }
 
 .submitforo{
     grid-area: enviarforo;
 }
+
 
 
 
